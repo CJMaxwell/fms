@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+$theme-colors: (
+  "primary": #282B80,
+  "danger": #ff4136
+);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+.fms-secondary {
+  background: linear-gradient(146.99deg, #282B80 0%, #28A745 86.59%);
+}
