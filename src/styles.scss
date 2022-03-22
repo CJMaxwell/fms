@@ -1,15 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
 
-$theme-colors: (
-  "primary": #282B80,
-  "danger": #ff4136
-);
-
-@import "node_modules/bootstrap/scss/bootstrap";
+@use './assets/scss/custom/custom' as *;
 
 body {
   font-family: 'Inter', sans-serif;
+  font-size: $font-size-base;
 }
-.fms-secondary {
-  background: linear-gradient(146.99deg, #282B80 0%, #28A745 86.59%);
+.text-white {
+  color: $white;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+.text-base {
+  font-size: $font-size-base;
+}
+
+.text-sm {
+  font-size: $font-size-sm;
+}
+
+.login-fs-split {
+  background-color: $primary;
+  height: 100vh;
+  padding-left: 3.75rem;
+  padding-right: 10rem;
+}
+.login-sc-split {
+  background-color: $white;
+  height: 100vh;
+}
+
+.login-detail {
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.login-btn {
+  background-color: $white;
+  color: $secondary;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 1rem 10rem;
+}
+.login-text {
+  font-weight: 600;
+  font-size: 1rem;
+  color: $gray-500;
+}
+
+.carousel-item.active p {
+  margin-bottom: 0px;
+}
+.carousel-indicators li {
+  background:orange;
+  color:purple;
+  height:auto;
+  text-indent: 0;
+  text-align:center;
+  margin-right: 8px;
+  margin-left: 8px;
+  border: none;
+}
+.carousel-caption {
+  color: $secondary;
+}
+.carousel-item img {
+  margin-bottom: 3.75rem;
+}
+.carousel-caption p {
+  color: $secondary;
+}
+
+
+.bg-dashboard {
+  background-color: $gray-300;
+  height: 100vh;
+}
+
+.fms-rounded {
+  border: 1px solid transparent;
+  border-radius: 13px;
 }
