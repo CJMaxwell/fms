@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LogoutComponent } from './components/logout/logout.component';
 
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
@@ -28,6 +29,10 @@ const routes: Routes = [
         loadChildren: () => import('./layouts/dashboard-layout/dashboard.module').then(m => m.DashboardModule)
       }
     ]
+  },
+
+  {
+    path: 'logout', component: LogoutComponent,
   }
 
 ];
