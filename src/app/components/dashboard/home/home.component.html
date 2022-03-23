@@ -1,0 +1,27 @@
+<div class="row">
+  <div *ngFor="let item of dashboardCards" class="col-md-3">
+    <fms-dashboardsummary [title]="item.title" [value]="item.value" [icon]="item.icon" [img]="item.img">
+    </fms-dashboardsummary>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-9 fms-rounded">
+    <img src="assets/img/dash-rep-lg.svg" alt="Large Power BI Report">
+  </div>
+  <div class="col-md-3 fms-rounded">
+    <img src="assets/img/dash-rep-sm.svg" alt="Mid Power BI Report">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <img src="assets/img/report-1.svg" alt="Mid Power BI Report">
+  </div>
+  <div class="col-md-4">
+    <img src="assets/img/report-2.svg" alt="Mid Power BI Report">
+  </div>
+  <div class="col-md-4">
+    <img src="assets/img/report-3.svg" alt="Mid Power BI Report">
+  </div>
+</div>

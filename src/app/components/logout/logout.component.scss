@@ -1,0 +1,18 @@
+.logout {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+.logout__btn {
+  outline: 0;
+  border: 1px solid transparent;
+  padding: 0.5rem 5rem;
+  margin-top: 1.5rem;
+}
+
+.logout__caption {
+  margin-top: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
