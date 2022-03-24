@@ -86,3 +86,90 @@ body {
   border: 1px solid transparent;
   border-radius: 13px;
 }
+
+.fms-btn__sm {
+  outline: 0;
+  border: 1px solid transparent;
+  padding: 0.65rem 1rem;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  color: $white;
+  background-color: $primary;
+  font-size: $font-size-sm;
+  font-weight:$font-weight-bold
+}
+
+.fms-btn__outline {
+  outline: 0;
+  border: 1px solid $primary;
+  padding: 0.65rem 1rem;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  color: $primary;
+  background-color: transparent;
+  font-size: $font-size-sm;
+  font-weight:$font-weight-bold
+}
+
+.fms-btn__plain {
+  outline: 0;
+  border: 1px solid transparent;
+  padding: 0.65rem 1rem;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  color: $gray-100;
+  background-color: transparent;
+  font-size: $font-size-sm;
+  font-weight:$font-weight-bold
+}
+
+.form-check-input:checked {
+  background-color: $success;
+  border-color: $success;
+}
+
+.profile {
+  font-size: $font-size-xl;
+  color: $gray-dark;
+  font-weight: $font-weight-bold;
+  margin-bottom: 2rem;
+}
+
+.profile-title {
+  font-size: $font-size-base;
+  color: $gray-500;
+  font-weight: $font-weight-bold;
+  margin-bottom: 2.5rem;
+}
+
+.profile-avatar {
+  margin-bottom: 2.5rem;
+}
+
+.profile-desc {
+  padding: 2.5rem 1.5rem 1.25rem 3.75rem;
+  font-size: $font-size-sm;
+}
+
+.fms-base-size {
+  font-size: $font-size-sm;
+}
+
+.profile-notification {
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+
+}
+.profile-notification, .notification-sub {
+  font-weight: $font-weight-bold;
+  color: $gray-500;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #F5F5F5;
+    opacity: 1;
+}
+
+.form-control {
+  border: 1px solid #D0D5DD;
+}
