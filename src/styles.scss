@@ -250,3 +250,21 @@ thead {
 .modal-footer {
   border-top: none;
 }
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: $white;
+  background-color: $primary;
+  border-radius: 5px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+  color: $primary;
+}
+
+.navbar-nav .nav-link.active {
+  color: $primary !important;
+}
+
+li.nav-item.active {
+  color: $primary;
+}
