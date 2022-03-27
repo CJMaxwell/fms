@@ -79,8 +79,12 @@ $line-height-lg:              2;
 // Carousel
 
 $carousel-control-color: $gray-500;
-$carousel-indicator-width:           2rem;
-$carousel-indicator-height:          1.5rem;
+$carousel-indicator-width:           .75rem;
+$carousel-indicator-height:          .75rem;
 $carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M17.3287 5.00072V7.00072L4.50042 7.00072L7.74294 10.2432L6.32873 11.6575L0.671875 6.0006L6.32873 0.34375L7.74294 1.75796L4.50019 5.00072L17.3287 5.00072Z'/></svg>");
 $carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M12.0377 0.34375L10.6268 1.76127L13.897 5.01624L0.291992 5.02993L0.294005 7.02993L13.8618 7.01627L10.6466 10.2465L12.0641 11.6574L17.7078 5.98735L12.0377 0.34375Z'/></svg>");
+
+
+
+
 
