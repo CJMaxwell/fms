@@ -1,50 +1,50 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" [routerLink]="['/dashboard']">
       <img src="assets/img/kdsg-logo.svg" alt="" srcset="">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse nav-menu-item" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <li class="nav-item main-item">
+          <a class="nav-link" [routerLink]="['/dashboard']" [routerLinkActive]="['active']">Home</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item main-item dropdown" [routerLinkActive]="['active']">
           <a class="nav-link dropdown-toggle" href="#" id="assetDropdown" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             Assets
           </a>
           <ul class="dropdown-menu" aria-labelledby="assetDropdown">
-            <li><a class="dropdown-item" href="#">Vehicle</a></li>
-            <li><a class="dropdown-item" href="#">Motorcycles</a></li>
-            <li><a class="dropdown-item" href="#">Maintenance</a></li>
-            <li><a class="dropdown-item" href="#">Decommissioned</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/dashboard/assets']">Vehicle</a></li>
+            <li><a class="dropdown-item">Motorcycles</a></li>
+            <li><a class="dropdown-item">Maintenance</a></li>
+            <li><a class="dropdown-item">Decommissioned</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Requests</a>
+        <li class="nav-item main-item">
+          <a class="nav-link">Requests</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="fleetDropdown" role="button" data-bs-toggle="dropdown"
+        <li class="nav-item main-item dropdown">
+          <a class="nav-link dropdown-toggle" id="fleetDropdown" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             Reports
           </a>
           <ul class="dropdown-menu" aria-labelledby="fleetDropdown">
-            <li><a class="dropdown-item" href="#">Fleet</a></li>
-            <li><a class="dropdown-item" href="#">Repair and maintenance</a></li>
-            <li><a class="dropdown-item" href="#">Decommission Report</a></li>
+            <li><a class="dropdown-item">Fleet</a></li>
+            <li><a class="dropdown-item">Repair and maintenance</a></li>
+            <li><a class="dropdown-item">Decommission Report</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Vendors</a>
+        <li class="nav-item main-item">
+          <a class="nav-link">Vendors</a>
         </li>
       </ul>
       <ul class="my-2 my-md-0 mr-md-3 d-flex list-unstyled">
         <li class="nav-item">
-          <a class="nav-link" href="">
+          <a class="nav-link">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M9.625 17.875C14.1813 17.875 17.875 14.1813 17.875 9.625C17.875 5.06865 14.1813 1.375 9.625 1.375C5.06865 1.375 1.375 5.06865 1.375 9.625C1.375 14.1813 5.06865 17.875 9.625 17.875Z"
@@ -55,7 +55,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">
+          <a class="nav-link">
             <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M18.7087 16.9592L18.7087 16.959C18.7936 16.5499 18.6503 16.1438 18.3299 15.8744C17.0058 14.7644 16.1963 13.1802 16.0246 11.4837C12.4236 11.2474 9.56562 8.24265 9.56562 4.58203C9.56562 3.79329 9.70195 3.0375 9.94737 2.33319C6.73434 2.39617 4.14901 5.02039 4.14901 8.24864V10.8043C4.14901 12.7656 3.28942 14.6171 1.7838 15.8905C1.46518 16.1632 1.32261 16.5969 1.43836 17.0252L18.7087 16.9592ZM18.7087 16.9592C18.6065 17.4531 18.1093 17.832 17.5227 17.832H2.60399C2.04484 17.832 1.56384 17.4882 1.43841 17.0254L18.7087 16.9592Z"
@@ -66,17 +66,19 @@
             </svg>
           </a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="">
-            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a class="nav-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
-                d="M18.7087 15.9592L18.7087 15.959C18.7936 15.5499 18.6503 15.1438 18.3299 14.8744C17.0058 13.7644 16.1963 12.1802 16.0246 10.4837C12.4236 10.2474 9.56562 7.24265 9.56562 3.58203C9.56562 2.79329 9.70195 2.0375 9.94737 1.33319C6.73434 1.39617 4.14901 4.02039 4.14901 7.24864V9.80428C4.14901 11.7656 3.28942 13.6171 1.7838 14.8905C1.46518 15.1632 1.32261 15.5969 1.43836 16.0252L18.7087 15.9592ZM18.7087 15.9592C18.6065 16.4531 18.1093 16.832 17.5227 16.832H2.60399C2.04484 16.832 1.56384 16.4882 1.43841 16.0254L18.7087 15.9592Z"
-                fill="#979797" stroke="#979797" />
+                d="M18.8691 12.4421L17.4619 11.239C17.5285 10.8308 17.5629 10.414 17.5629 9.99717C17.5629 9.58037 17.5285 9.16357 17.4619 8.75537L18.8691 7.55225C18.9753 7.46138 19.0513 7.34036 19.0869 7.20527C19.1226 7.07018 19.1164 6.92743 19.0689 6.796L19.0496 6.74014C18.6622 5.65738 18.0821 4.65365 17.3373 3.77744L17.2986 3.73232C17.2083 3.62609 17.0879 3.54972 16.9532 3.51329C16.8186 3.47685 16.6761 3.48206 16.5445 3.52822L14.7979 4.14912C14.1533 3.62061 13.4336 3.20381 12.6559 2.91162L12.3186 1.08545C12.2931 0.94804 12.2265 0.821626 12.1274 0.723003C12.0284 0.62438 11.9018 0.558216 11.7643 0.533301L11.7063 0.522559C10.5869 0.320605 9.40957 0.320605 8.29024 0.522559L8.23223 0.533301C8.09472 0.558216 7.96805 0.62438 7.86904 0.723003C7.77004 0.821626 7.70338 0.94804 7.67793 1.08545L7.33848 2.92022C6.56695 3.21246 5.84847 3.62904 5.21153 4.15342L3.45196 3.52822C3.3204 3.48169 3.1778 3.4763 3.0431 3.51275C2.9084 3.54921 2.78799 3.62579 2.69786 3.73232L2.65918 3.77744C1.91528 4.65427 1.33527 5.65783 0.946879 6.74014L0.927543 6.796C0.830864 7.06455 0.910356 7.36533 1.12735 7.55225L2.55176 8.76826C2.48516 9.17217 2.45293 9.58467 2.45293 9.99502C2.45293 10.4075 2.48516 10.82 2.55176 11.2218L1.12735 12.4378C1.02121 12.5287 0.945239 12.6497 0.909548 12.7848C0.873857 12.9199 0.880134 13.0626 0.927543 13.194L0.946879 13.2499C1.33575 14.3327 1.91153 15.3317 2.65918 16.2126L2.69786 16.2577C2.78821 16.364 2.90863 16.4403 3.04324 16.4768C3.17786 16.5132 3.32036 16.508 3.45196 16.4618L5.21153 15.8366C5.85176 16.363 6.56719 16.7798 7.33848 17.0698L7.67793 18.9046C7.70338 19.042 7.77004 19.1684 7.86904 19.267C7.96805 19.3657 8.09472 19.4318 8.23223 19.4567L8.29024 19.4675C9.41986 19.6705 10.5766 19.6705 11.7063 19.4675L11.7643 19.4567C11.9018 19.4318 12.0284 19.3657 12.1274 19.267C12.2265 19.1684 12.2931 19.042 12.3186 18.9046L12.6559 17.0784C13.4333 16.787 14.1571 16.3688 14.7979 15.8409L16.5445 16.4618C16.6761 16.5083 16.8187 16.5137 16.9534 16.4773C17.0881 16.4408 17.2085 16.3642 17.2986 16.2577L17.3373 16.2126C18.085 15.3296 18.6607 14.3327 19.0496 13.2499L19.0689 13.194C19.1656 12.9298 19.0861 12.629 18.8691 12.4421V12.4421ZM15.9365 9.00889C15.9902 9.3333 16.0182 9.66631 16.0182 9.99932C16.0182 10.3323 15.9902 10.6653 15.9365 10.9897L15.7947 11.8513L17.3996 13.2241C17.1563 13.7846 16.8492 14.3152 16.4844 14.8054L14.4906 14.0985L13.816 14.6528C13.3025 15.0739 12.7311 15.4048 12.1123 15.6368L11.2938 15.944L10.9092 18.028C10.3024 18.0968 9.68979 18.0968 9.08301 18.028L8.69844 15.9397L7.88633 15.6282C7.27403 15.3962 6.70469 15.0653 6.19551 14.6464L5.5209 14.0899L3.51426 14.8032C3.14903 14.3112 2.84395 13.7806 2.59903 13.222L4.2211 11.8362L4.08145 10.9769C4.02989 10.6567 4.00196 10.3259 4.00196 9.99932C4.00196 9.67061 4.02774 9.3419 4.08145 9.02178L4.2211 8.1624L2.59903 6.77666C2.8418 6.21592 3.14903 5.6874 3.51426 5.19541L5.5209 5.90869L6.19551 5.35225C6.70469 4.9333 7.27403 4.60244 7.88633 4.37041L8.70059 4.06318L9.08516 1.9749C9.68887 1.90615 10.3055 1.90615 10.9113 1.9749L11.2959 4.05889L12.1145 4.36611C12.7311 4.59814 13.3047 4.929 13.8182 5.3501L14.4928 5.90439L16.4865 5.19756C16.8518 5.68955 17.1568 6.22022 17.4018 6.77881L15.7969 8.15166L15.9365 9.00889ZM10.0004 6.00322C7.91211 6.00322 6.21915 7.69619 6.21915 9.78447C6.21915 11.8728 7.91211 13.5657 10.0004 13.5657C12.0887 13.5657 13.7816 11.8728 13.7816 9.78447C13.7816 7.69619 12.0887 6.00322 10.0004 6.00322ZM11.702 11.486C11.4788 11.7099 11.2136 11.8873 10.9215 12.0083C10.6295 12.1292 10.3165 12.1912 10.0004 12.1907C9.35801 12.1907 8.7543 11.9394 8.29883 11.486C8.07502 11.2629 7.89753 10.9976 7.7766 10.7056C7.65566 10.4136 7.59365 10.1005 7.59414 9.78447C7.59414 9.14209 7.84551 8.53838 8.29883 8.08291C8.7543 7.62744 9.35801 7.37822 10.0004 7.37822C10.6428 7.37822 11.2465 7.62744 11.702 8.08291C11.9258 8.30609 12.1033 8.57131 12.2242 8.86333C12.3451 9.15535 12.4071 9.4684 12.4066 9.78447C12.4066 10.4269 12.1553 11.0306 11.702 11.486Z"
+                fill="#818181" />
             </svg>
           </a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="">
+          <a class="nav-link">
             Danladi Abubakar
           </a>
         </li>
@@ -103,8 +105,9 @@
             </svg>
           </a>
           <ul class="dropdown-menu" aria-labelledby="profileDropdown">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/dashboard/profile']">Profile</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/logout']">Logout</a>
+            </li>
           </ul>
         </li>
       </ul>

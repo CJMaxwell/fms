@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+// @import '~bootstrap/scss/bootstrap';
 
 @use './assets/scss/custom/custom' as *;
 
 body {
   font-family: 'Inter', sans-serif;
-  font-size: $font-size-base;
+  font-size: $font-size-sm;
 }
 .text-white {
   color: $white;
@@ -31,6 +33,7 @@ body {
 .login-sc-split {
   background-color: $white;
   height: 100vh;
+  padding-top: 10vh;
 }
 
 .login-detail {
@@ -172,4 +175,97 @@ body {
 
 .form-control {
   border: 1px solid #D0D5DD;
+}
+
+.asset-table {
+  background-color: $gray-800;
+  margin: 2.5rem !important;
+}
+
+.hide {
+  visibility: hidden;
+}
+.table>:not(:first-child) {
+  border-top: none !important;
+}
+
+td {
+  border-bottom: 1px solid #EDF2F7 !important;
+}
+thead {
+  border: 1px solid transparent;
+  color: #818181;
+}
+
+.asset-table table {
+  padding: 1.375rem;
+}
+ th {
+  font-weight: $font-weight-normal !important;
+  font-size: 0.8rem;
+ }
+
+.default-title {
+  font-size: $font-size-xl;
+  color: $gray-dark;
+  font-weight: $font-weight-bold;
+}
+
+.addNew {
+  border: 1px solid $primary;
+  outline: 0;
+  font-size: $font-size-sm;
+  padding: 0.6rem 1.5rem;
+}
+
+
+.fms-btn__save {
+  outline: 0;
+  border: 1px solid transparent;
+  padding: 0.65rem 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  color: $white;
+  background-color: $primary;
+  font-size: $font-size-sm;
+  font-weight:$font-weight-bold
+}
+
+.fms-btn__close {
+  outline: 0;
+  border: 1px solid #8A8D93;
+  padding: 0.65rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  color: #8A8D93;
+  background-color: transparent;
+  font-size: $font-size-sm;
+  font-weight:$font-weight-bold
+}
+
+.fms-btn__close:hover {
+    color: #8A8D93;
+}
+
+
+.modal-footer {
+  border-top: none;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: $white;
+  background-color: $primary;
+  border-radius: 5px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+  color: $primary;
+}
+
+.navbar-nav .nav-link.active {
+  color: $primary !important;
+}
+
+li.nav-item.active {
+  color: $primary;
 }

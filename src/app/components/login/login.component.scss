@@ -34,3 +34,45 @@
   font-weight: 700;
   margin-bottom: 1rem;
 }
+
+.carousel-caption {
+  margin-top: 3.75rem;
+}
+
+.carousel-indicators {
+  top: 75vh;
+}
+
+.carousel-indicators button {
+  border-radius: 50%;
+  // background: #000;
+}
+
+button.carousel-control-prev, button.carousel-control-next {
+  top: 77vh;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 16.66px;
+  height: 11.31px;
+    // background-repeat: no-repeat;
+    // background-position: 50%;
+    // background-size: 100% 100%;
+}
+
+.carousel-caption.d-none.d-md-block {
+  top: 60vh;
+    // z-index: 99999;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #E0E0E0;
+}
+button.active {
+  // background-color: #3E44CC !important;
+  width: 23px;
+  height: 10px;
+  background-image: url('../../../assets/img/ellipse-active.png');
+  background-size: cover;
+  background-position: center;
+}
