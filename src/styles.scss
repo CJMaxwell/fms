@@ -7,6 +7,7 @@
 body {
   font-family: 'Inter', sans-serif;
   font-size: $font-size-sm;
+  height: 100vh;
 }
 .text-white {
   color: $white;
@@ -33,7 +34,7 @@ body {
 .login-sc-split {
   background-color: $white;
   height: 100vh;
-  padding-top: 10vh;
+  // padding-top: 5vh;
 }
 
 .login-detail {
@@ -82,7 +83,8 @@ body {
 
 .bg-dashboard {
   background-color: $gray-300;
-  height: 100vh;
+  min-height: 100vh;
+  padding-bottom: 2rem;
 }
 
 .fms-rounded {
@@ -268,4 +270,8 @@ thead {
 
 li.nav-item.active {
   color: $primary;
+}
+
+.wrapper {
+  padding-bottom: 2rem;
 }
