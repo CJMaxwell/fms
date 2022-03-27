@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  font-size: $font-size-base;
+  font-size: $font-size-sm;
 }
 .text-white {
   color: $white;
@@ -222,7 +222,7 @@ thead {
   outline: 0;
   border: 1px solid transparent;
   padding: 0.65rem 2rem;
-  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   border-radius: 8px;
   color: $white;
   background-color: $primary;
@@ -234,7 +234,7 @@ thead {
   outline: 0;
   border: 1px solid #8A8D93;
   padding: 0.65rem 1rem;
-  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   border-radius: 8px;
   color: #8A8D93;
   background-color: transparent;
@@ -244,4 +244,9 @@ thead {
 
 .fms-btn__close:hover {
     color: #8A8D93;
+}
+
+
+.modal-footer {
+  border-top: none;
 }
