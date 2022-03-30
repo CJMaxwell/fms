@@ -43,6 +43,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 .login-btn {
   background-color: $white;
   color: $secondary;
@@ -51,6 +52,7 @@ body {
   outline: none;
   padding: 1rem 10rem;
 }
+
 .login-text {
   font-weight: 600;
   font-size: 1rem;
@@ -60,6 +62,7 @@ body {
 .carousel-item.active p {
   margin-bottom: 0px;
 }
+
 .carousel-indicators li {
   background:orange;
   color:purple;
@@ -70,16 +73,18 @@ body {
   margin-left: 8px;
   border: none;
 }
+
 .carousel-caption {
   color: $secondary;
 }
+
 .carousel-item img {
   margin-bottom: 3.75rem;
 }
+
 .carousel-caption p {
   color: $secondary;
 }
-
 
 .bg-dashboard {
   background-color: $gray-300;
