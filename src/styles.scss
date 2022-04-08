@@ -89,6 +89,7 @@ body {
 .bg-dashboard {
   background-color: $gray-300;
   min-height: 100vh;
+  // min-width: 100vw;
   padding-bottom: 2rem;
 }
 
@@ -221,6 +222,7 @@ thead {
 .addNew {
   border: 1px solid $primary;
   outline: 0;
+
   font-size: $font-size-sm;
   padding: 0.6rem 1.5rem;
 }
@@ -280,3 +282,107 @@ li.nav-item.active {
 .wrapper {
   padding-bottom: 2rem;
 }
+.pointer{
+  cursor: pointer;
+}
+
+.grow {
+  transition: all .2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+}
+.searchbar{
+  border: none;
+  border-radius: 5px;
+
+}
+
+.search {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), transparent;
+  border-radius: 0.625rem;
+  border-color: $primary;
+  color: $gray-200;
+
+  padding-left:3.125rem;
+
+}
+body::-webkit-scrollbar {
+  width: 6px;               /* width of the entire scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+  background: transparent       /* color of the tracking area */
+  }
+  body::-webkit-scrollbar-thumb {
+  background-color: $primary;    /* color of the scroll thumb */
+  border-radius: 10px;       /* roundness of the scroll thumb */
+  border: 3px solid transparent  /* creates padding around scroll thumb */
+  }
+
+  .textOnInput {
+    position: relative;
+  }
+  .textOnInput label {
+    position: absolute;
+    top: -15px;
+    left: 23px;
+    padding: 5px;
+    z-index: 1;
+    font-size: 12px;
+    color: lighten(#3A3541, 57%);
+  }
+  .textOnInput label:after {
+    content: " ";
+    background-color: #fff;
+    width: 100%;
+    height: 13px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  label {
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: .5rem;
+  }
+  .form-control {
+    box-shadow: none !important;
+  }
+
+  .form-select {
+    border: 1px solid lighten(#3A3541, 57%) !important;
+  }
+  .modal-header {
+    border-bottom: none;
+    // color: rgba(58, 53, 65, 0.87);
+    margin-right: 2rem;
+    margin-top: 2rem;
+  }
+
+
+  .new-asset {
+    margin-bottom: 2rem;
+    color: rgba(58, 53, 65, 0.87);
+    font-size: 1.5rem;
+  }
+
+  .confirm-title {
+    padding-top: 3rem;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+
+  .confirm-desc {
+    color: #A1A1A1;
+    font-size: 1.15rem;
+    font-weight: 400;
+  }
+
+  .fms-btn__close.confirm-btn, .fms-btn__save.confirm-btn {
+    font-weight: 400;
+  }
+
+
