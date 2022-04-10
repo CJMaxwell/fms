@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AssetComponent } from 'src/app/components/dashboard/asset/asset.component';
 import { HomeComponent } from 'src/app/components/dashboard/home/home.component';
 import { RequestComponent } from 'src/app/components/dashboard/request/request.component';
+import { VendorDetailsComponent } from 'src/app/components/dashboard/vendor-details/vendor-details.component';
+import { VendorsComponent } from 'src/app/components/dashboard/vendors/vendors.component';
 import { ProfileComponent } from 'src/app/components/profile/profile.component';
 
 const routes: Routes = [
@@ -22,6 +24,13 @@ const routes: Routes = [
   },
   {
     path: 'requests', component: RequestComponent
+  },
+  {
+    path: 'vendors', component: VendorsComponent
+  }
+  ,
+  {
+    path: 'vendors/:id', component: VendorDetailsComponent
   }
 
 ];

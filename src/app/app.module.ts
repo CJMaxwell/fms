@@ -1,3 +1,4 @@
+import { VendorService } from 'src/services/vendor.service';
 import { SharedModule } from './shared/shared.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,6 +12,7 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
 
 import { LogoutComponent } from './components/logout/logout.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
 
   providers: [],

@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TableComponent } from './table/table.component';
 import { CollapseTableComponent } from './collapse-table/collapse-table.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,8 @@ import { CollapseTableComponent } from './collapse-table/collapse-table.componen
     LoaderComponent,
     NavbarComponent,
     TableComponent,
-    CollapseTableComponent
+    CollapseTableComponent,
+
   ],
   exports:[
     FilterComponent,
@@ -24,7 +26,8 @@ import { CollapseTableComponent } from './collapse-table/collapse-table.componen
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
 
   ]
 })

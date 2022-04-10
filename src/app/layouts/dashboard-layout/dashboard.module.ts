@@ -9,6 +9,10 @@ import { DashboardsummaryComponent } from 'src/app/components/dashboard/dashboar
 import { ProfileComponent } from '../../components/profile/profile.component';
 import { AssetComponent } from 'src/app/components/dashboard/asset/asset.component';
 import { RequestComponent } from '../../components/dashboard/request/request.component';
+import { VendorsComponent } from '../../components/dashboard/vendors/vendors.component';
+import { VendorDetailsComponent } from '../../components/dashboard/vendor-details/vendor-details.component';
+import { FormsModule } from '@angular/forms';
+import { VendorService } from 'src/services/vendor.service';
 
 
 @NgModule({
@@ -18,16 +22,20 @@ import { RequestComponent } from '../../components/dashboard/request/request.com
     ProfileComponent,
     AssetComponent,
     RequestComponent,
+    VendorsComponent,
+    VendorDetailsComponent,
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
 
   ],
   exports: [
     HomeComponent,
     ProfileComponent
-  ]
+  ],
+  providers: [VendorService]
 })
 export class DashboardModule { }
