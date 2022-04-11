@@ -5,7 +5,11 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { HomeComponent } from 'src/app/components/dashboard/home/home.component';
 import { DashboardsummaryComponent } from 'src/app/components/dashboard/dashboardsummary/dashboardsummary.component';
 import { ProfileComponent } from '../../components/profile/profile.component';
-import { AssetComponent } from 'src/app/components/dashboard/asset/asset.component';
+import { AssetTableComponent } from '../../components/dahboard/asset-table/asset-table.component';
+import { VehicleComponent } from 'src/app/components/dashboard/assets/vehicle/vehicle.component';
+import { MotorcycleComponent } from '../../components/dashboard/assets/motorcycle/motorcycle.component';
+import { MaintenanceComponent } from '../../components/dashboard/assets/maintenance/maintenance.component';
+import { DecommissionedComponent } from '../../components/dashboard/assets/decommissioned/decommissioned.component';
 
 
 @NgModule({
@@ -13,7 +17,11 @@ import { AssetComponent } from 'src/app/components/dashboard/asset/asset.compone
     HomeComponent,
     DashboardsummaryComponent,
     ProfileComponent,
-    AssetComponent,
+    AssetTableComponent,
+    VehicleComponent,
+    MotorcycleComponent,
+    MaintenanceComponent,
+    DecommissionedComponent,
   ],
   imports: [
     CommonModule,

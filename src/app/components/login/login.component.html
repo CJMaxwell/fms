@@ -1,3 +1,7 @@
+<section *ngIf="loading">
+  <fms-loader></fms-loader>
+</section>
+
 <section class="row">
   <section class="col-md-6 login-fs-split pt-5">
     <nav class="navbar">
@@ -19,7 +23,8 @@
           <h1 class="text-white">Login</h1>
         </header>
         <p class="text-white">Click on the button below to enter the application</p>
-        <button [routerLink]="['/dashboard']" class="login-btn">
+        <!-- [routerLink]="['/dashboard']" -->
+        <button (click)="login()" class="login-btn">
           <svg style="height: 19px;" width="32" height="25" viewBox="0 0 32 25" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -78,31 +83,29 @@
   </section>
 
   <!-- Modal -->
-  <section class="">
-    <div class="modal fade w-100" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <h5 class="modal-title" id="aboutModalLabel">Kaduna State Government Fleet Management System</h5>
-            <p>
-              The Kaduna State Government’s Fleet Management software provides all relevant information related to the
-              maintenance and
-              performance of its fleet. In effect, it is a sophisticated database that enables one to record and analyze
-              the key
-              attributes that can help improve efficiencies and drive down costs by reducing downtime and improving
-              productivity.
-            </p>
-            <p>
-              This tool also provides a robust analytics and reporting modules that is both easily digestible and user
-              friendly.
-            </p>
-          </div>
+  <div class="modal fade w-100" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5 class="modal-title" id="aboutModalLabel">Kaduna State Government Fleet Management System</h5>
+          <p>
+            The Kaduna State Government’s Fleet Management software provides all relevant information related to the
+            maintenance and
+            performance of its fleet. In effect, it is a sophisticated database that enables one to record and analyze
+            the key
+            attributes that can help improve efficiencies and drive down costs by reducing downtime and improving
+            productivity.
+          </p>
+          <p>
+            This tool also provides a robust analytics and reporting modules that is both easily digestible and user
+            friendly.
+          </p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
 </section>

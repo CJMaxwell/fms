@@ -1,7 +1,8 @@
 .modal-dialog {
   max-width: 60%;
-  margin: 1.75rem auto;
+  // margin: 1.75rem auto;
 }
+
 .modal-body {
   position: relative;
   flex: 1 1 auto;
@@ -13,23 +14,27 @@
   background-color: transparent !important;
   border: none !important;
 }
+
 .modal-header {
-    border-bottom: none !important;
+  border-bottom: none !important;
 }
+
 .btn-close {
   background-color: #FFFFFF;
   border-radius: 50%;
 }
+
 .modal {
   background-color: #201F1F;
   opacity: 0.94;
 }
 
 .modal-dialog {
-  padding-top: 15vh;
+  // padding-top: 15vh;
   font-size: 16px;
   text-align: justify;
 }
+
 .modal-title {
   font-weight: 700;
   margin-bottom: 1rem;
@@ -48,26 +53,29 @@
   // background: #000;
 }
 
-button.carousel-control-prev, button.carousel-control-next {
+button.carousel-control-prev,
+button.carousel-control-next {
   top: 92vh;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
   width: 16.66px;
   height: 11.31px;
-    // background-repeat: no-repeat;
-    // background-position: 50%;
-    // background-size: 100% 100%;
+  // background-repeat: no-repeat;
+  // background-position: 50%;
+  // background-size: 100% 100%;
 }
 
 .carousel-caption.d-none.d-md-block {
   top: 68vh;
-    // z-index: 99999;
+  // z-index: 99999;
 }
 
 .carousel-indicators [data-bs-target] {
   background-color: #E0E0E0;
 }
+
 button.active {
   // background-color: #3E44CC !important;
   width: 23px;
