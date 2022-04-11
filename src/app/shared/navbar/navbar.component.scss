@@ -6,11 +6,13 @@
 .nav-menu-item {
   padding-left: 5rem;
 }
-li.nav-item{
+
+li.nav-item {
   font-size: 1rem;
 
 }
-.main-item{
+
+.main-item {
   padding-right: 1.5rem;
 }
 
@@ -18,3 +20,15 @@ li.nav-item{
   color: #616161;
 }
 
+ul.dropdown-menu.show {
+  margin-top: 1.2rem;
+}
+
+.dropdown-item {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+}
+
+.dropdown-item:last-child {
+  margin-bottom: 0.7rem;
+}

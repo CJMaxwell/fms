@@ -1,0 +1,43 @@
+<section class="fms-base-size bg-white rounded-3">
+  <p class="hide">Assets</p>
+  <section class="asset-table p-3">
+    <table class="table align-items-center">
+      <thead>
+        <tr>
+          <th *ngFor="let assetHeader of assetHeaders" scope="col">
+            {{assetHeader}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let asset of assets; let i = index" class="text-dark user-row">
+          <td class="p-3">{{i+1}}</td>
+          <td class="p-3 text-primary text-decoration-underline">{{asset.id}}</td>
+          <td class="p-3">{{asset.brand}}</td>
+          <td class="p-3">{{asset.model}}</td>
+          <td class="p-3">{{asset.mda}}</td>
+          <td class="p-3">{{asset.year}}</td>
+          <td class="p-3">{{asset.color}}</td>
+          <td class="p-3">{{asset.plateNumber}}</td>
+          <td class="p-3">{{asset.chasisNumber}}</td>
+          <td class="p-3">{{asset.engineNumber}}</td>
+          <td class="p-3">{{asset.location}}</td>
+          <td class="p-3">{{asset.purchasedDate}}</td>
+          <td class="p-3">{{asset.createdDate}}</td>
+          <td class="p-3">{{asset.mileage}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <div class="d-flex justify-content-center p-2">
+    <ngb-pagination [collectionSize]="120" [(page)]="page" [pageSize]="pageSize" [maxSize]="3"
+      (pageChange)="filterData()">
+
+      <ng-template ngbPaginationEllipsis>...</ng-template>
+      <ng-template ngbPaginationNumber let-page class="bg-primary">{{ page }}</ng-template>
+    </ngb-pagination>
+  </div> -->
+  </section>
+  <p class="hide">Assets</p>
+
+</section>

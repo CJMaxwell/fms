@@ -1,13 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'fms-asset',
-  templateUrl: './asset.component.html',
-  styleUrls: ['./asset.component.scss']
+  selector: 'fms-asset-table',
+  templateUrl: './asset-table.component.html',
+  styleUrls: ['./asset-table.component.scss']
 })
-export class AssetComponent implements OnInit {
+export class AssetTableComponent implements OnInit {
 
-  assets = [
+  @Input() assets: any[] = [];
+
+  assetHeaders = [
+    'S/N', 'Asset ID', 'Brand', 'Model', 'MDA',
+    'Manufactured Year', 'Color', 'Plate Number'
+  ];
+
+  // 'Chasis Number', 'Engine Number', 'Location',
+  // 'Purchased Date', 'Created Date', 'Mileage'
+
+  private sampleAssets = [
     {
       id: 'KSG012022',
       brand: 'Toyota',
@@ -16,6 +26,12 @@ export class AssetComponent implements OnInit {
       year: '2015',
       color: 'White',
       plateNumber: 'KD01A69',
+      // chasisNumber: '',
+      // engineNumber: '',
+      // location: '',
+      // purchasedDate: '',
+      // createdDate: '',
+      // mileage: ''
     },
     {
       id: 'KSG022022',
@@ -80,11 +96,14 @@ export class AssetComponent implements OnInit {
       color: 'Branded',
       plateNumber: 'MKA449AR',
     }
-  ]
+  ];
 
   constructor() { }
 
   ngOnInit(): void {
+    if (this.assets.length < 1) {
+      this.assets = this.sampleAssets;
+    }
   }
 
 }

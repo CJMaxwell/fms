@@ -18,10 +18,20 @@
             Assets
           </a>
           <ul class="dropdown-menu" aria-labelledby="assetDropdown">
-            <li><a class="dropdown-item" [routerLink]="['/dashboard/assets']">Vehicle</a></li>
-            <li><a class="dropdown-item">Motorcycles</a></li>
-            <li><a class="dropdown-item">Maintenance</a></li>
-            <li><a class="dropdown-item">Decommissioned</a></li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/dashboard/assets/vehicles']">
+                Vehicle
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/dashboard/assets/motorcycles']">Motorcycles</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/dashboard/assets/maintenance']">Maintenance</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/dashboard/assets/decommissioned']">Decommissioned</a>
+            </li>
           </ul>
         </li>
         <li class="nav-item main-item">
