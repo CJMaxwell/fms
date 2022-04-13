@@ -1,1 +1,61 @@
-<p>maintenance works!</p>
+<div class="row">
+  <div *ngFor="let maintStat of maintStats" class="col-md-4">
+    <fms-dashboardsummary [title]="maintStat.title" [value]="maintStat.value" [icon]="maintStat.icon"
+      [img]="maintStat.img">
+    </fms-dashboardsummary>
+  </div>
+</div>
+
+<section class="d-flex justify-content-between align-content-center py-5">
+  <h5 class="default-title">Maintenance</h5>
+</section>
+<section class="fms-base-size bg-white rounded-3">
+  <p class="hide">Assets</p>
+  <section class="asset-table p-3">
+    <table class="table align-items-center">
+      <thead>
+        <tr>
+          <th *ngFor="let maintHeader of maintHeaders" scope="col">
+            {{maintHeader}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let asset of assets; let i = index" class="text-dark user-row">
+          <td class="p-3">{{i+1}}</td>
+          <td class="p-3 text-primary text-decoration-underline">{{asset.id}}</td>
+          <td class="p-3">{{asset.manufacturer}}</td>
+          <td class="p-3">{{asset.model}}</td>
+          <td class="p-3">{{asset.color}}</td>
+          <td class="p-3">{{asset.plateNumber}}</td>
+          <td class="p-3">{{asset.assetType}}</td>
+          <td class="p-3">{{asset.category}}</td>
+          <td class="p-3">
+
+            <svg *ngIf="asset.status == 'Completed'" width="6" height="6" viewBox="0 0 6 6" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="3" cy="3" r="3" fill="#74A27F" />
+            </svg>
+            <svg *ngIf="asset.status != 'Completed'" width="6" height="6" viewBox="0 0 6 6" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="3" cy="3" r="3" fill="#B26153" />
+            </svg>
+            {{asset.status}}
+          </td>
+          <td class="p-3">{{asset.vendor}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- <div class="d-flex justify-content-center p-2">
+    <ngb-pagination [collectionSize]="120" [(page)]="page" [pageSize]="pageSize" [maxSize]="3"
+      (pageChange)="filterData()">
+
+      <ng-template ngbPaginationEllipsis>...</ng-template>
+      <ng-template ngbPaginationNumber let-page class="bg-primary">{{ page }}</ng-template>
+    </ngb-pagination>
+  </div> -->
+  </section>
+  <p class="hide">Assets</p>
+
+</section>
