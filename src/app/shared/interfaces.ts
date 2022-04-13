@@ -1,11 +1,11 @@
 export interface VendorInterface {
-  vendorId: string;
-  vendorFirstName: string;
-  vendorLastName: string;
-  vendorAddress: string;
-  vendorState: string;
-  vendorPhoneNumber: number;
-  vendorEmail: string;
+  Id: string;
+  FirstName: string;
+  LastName: string;
+  Address: string;
+  State: string;
+  PhoneNumber: number;
+  Email: string;
   assetType: string;
   dateAdded: Date;
 }

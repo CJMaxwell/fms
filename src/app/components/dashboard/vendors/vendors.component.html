@@ -84,14 +84,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let v of filteredVendors; let i = index" class="text-dark user-row pointer" [routerLink]="[v.vendorId]">
+        <tr *ngFor="let vendor of vendors2; let i = index"  class="text-dark user-row pointer" [routerLink]="[vendor.Id]">
           <td class="p-3">{{i+1}}</td>
-          <td class="p-3 text-primary text-decoration-underline">{{v.vendorFirstName+''+v.vendorLastName}}</td>
-          <td class="p-3">{{v.vendorAddress}}</td>
-          <td class="p-3">{{v.assetType}}</td>
-          <td class="p-3">{{v.vendorPhoneNumber}}</td>
-          <td class="p-3">{{v.vendorEmail}}</td>
-          <td class="p-3">{{v.dateAdded}}</td>
+          <td class="p-3 ">{{vendor.FirstName+' '+vendor.LastName}}</td>
+          <td class="p-3">{{vendor.Address}}</td>
+          <td class="p-3">{{vendor.assetType}}</td>
+          <td class="p-3">{{vendor.PhoneNumber}}</td>
+          <td class="p-3">{{vendor.Email}}</td>
+          <td class="p-3">{{vendor.dateAdded|date:'medium'}}</td>
         </tr>
       </tbody>
     </table>

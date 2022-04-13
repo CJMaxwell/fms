@@ -312,19 +312,22 @@ li.nav-item.active {
 body::-webkit-scrollbar,
 .modal::-webkit-scrollbar,
 .table::-webkit-scrollbar,
-.asset-table::-webkit-scrollbar {
+.asset-table::-webkit-scrollbar,
+.card::-webkit-scrollbar {
   width: 6px; /* width of the entire scrollbar */
 }
 body::-webkit-scrollbar-track,
 .modal::-webkit-scrollbar-track,
 .table::-webkit-scrollbar-track,
-.asset-table::-webkit-scrollbar-track {
+.asset-table::-webkit-scrollbar-track
+.card::-webkit-scrollbar-track {
   background: transparent; /* color of the tracking area */
 }
 body::-webkit-scrollbar-thumb,
 .modal::-webkit-scrollbar-thumb,
 .table::-webkit-scrollbar-thumb,
-.asset-table::-webkit-scrollbar-thumb {
+.asset-table::-webkit-scrollbar-thumb,
+.card::-webkit-scrollbar-thumb {
   background-color: $primary; /* color of the scroll thumb */
   border-radius: 10px; /* roundness of the scroll thumb */
   border: 3px solid transparent; /* creates padding around scroll thumb */
