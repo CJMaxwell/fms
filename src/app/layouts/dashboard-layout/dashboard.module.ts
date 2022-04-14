@@ -1,3 +1,5 @@
+import { SharedModule } from './../../shared/shared.module';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -8,8 +10,13 @@ import { ProfileComponent } from '../../components/profile/profile.component';
 import { AssetTableComponent } from '../../components/dahboard/asset-table/asset-table.component';
 import { VehicleComponent } from 'src/app/components/dashboard/assets/vehicle/vehicle.component';
 import { MotorcycleComponent } from '../../components/dashboard/assets/motorcycle/motorcycle.component';
-import { MaintenanceComponent } from '../../components/dashboard/assets/maintenance/maintenance.component';
 import { DecommissionedComponent } from '../../components/dashboard/assets/decommissioned/decommissioned.component';
+import { RequestComponent } from '../../components/dashboard/request/request.component';
+import { VendorsComponent } from '../../components/dashboard/vendors/vendors.component';
+import { VendorDetailsComponent } from '../../components/dashboard/vendor-details/vendor-details.component';
+import { FormsModule } from '@angular/forms';
+import { VendorService } from 'src/services/vendor.service';
+import { MaintenanceComponent } from 'src/app/components/dashboard/assets/maintenance/maintenance.component';
 
 
 @NgModule({
@@ -22,14 +29,21 @@ import { DecommissionedComponent } from '../../components/dashboard/assets/decom
     MotorcycleComponent,
     MaintenanceComponent,
     DecommissionedComponent,
+    RequestComponent,
+    VendorsComponent,
+    VendorDetailsComponent,
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    SharedModule,
+    FormsModule,
+
   ],
   exports: [
     HomeComponent,
     ProfileComponent
-  ]
+  ],
+  providers: [VendorService]
 })
 export class DashboardModule { }

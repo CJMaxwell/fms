@@ -5,7 +5,7 @@
 @use './assets/scss/custom/custom'as *;
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: $font-size-sm;
   height: 100vh;
 }
@@ -91,6 +91,7 @@ body {
 .bg-dashboard {
   background-color: $gray-300;
   min-height: 100vh;
+  // min-width: 100vw;
   padding-bottom: 2rem;
 }
 
@@ -170,7 +171,6 @@ body {
 .profile-notification {
   margin-top: 4rem;
   margin-bottom: 2.5rem;
-
 }
 
 .profile-notification,
@@ -186,12 +186,14 @@ body {
 }
 
 .form-control {
-  border: 1px solid #D0D5DD;
+  border: 1px solid #d0d5dd;
 }
 
 .asset-table {
   background-color: $gray-800;
   margin: 2.5rem !important;
+  height: 40vh;
+  overflow-y: scroll !important;
 }
 
 .hide {
@@ -203,7 +205,7 @@ body {
 }
 
 td {
-  border-bottom: 1px solid #EDF2F7 !important;
+  border-bottom: 1px solid #edf2f7 !important;
 }
 
 thead {
@@ -229,10 +231,10 @@ th {
 .addNew {
   border: 1px solid $primary;
   outline: 0;
+
   font-size: $font-size-sm;
   padding: 0.6rem 1.5rem;
 }
-
 
 .fms-btn__save {
   outline: 0;
@@ -248,11 +250,11 @@ th {
 
 .fms-btn__close {
   outline: 0;
-  border: 1px solid #8A8D93;
+  border: 1px solid #8a8d93;
   padding: 0.65rem 1rem;
   margin-bottom: 1.5rem;
   border-radius: 8px;
-  color: #8A8D93;
+  color: #8a8d93;
   background-color: transparent;
   font-size: $font-size-sm;
   font-weight: $font-weight-bold
@@ -260,8 +262,12 @@ th {
 
 .fms-btn__close:hover {
   color: #8A8D93;
+  font-weight: $font-weight-bold;
 }
 
+.fms-btn__close:hover {
+  color: #8a8d93;
+}
 
 .modal-footer {
   border-top: none;
@@ -291,6 +297,61 @@ li.nav-item.active {
   padding-bottom: 2rem;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+.grow {
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.searchbar {
+  border: none;
+  border-radius: 5px;
+}
+
+.search {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), transparent;
+  border-radius: 0.625rem;
+  border-color: $primary;
+  color: $gray-200;
+
+  padding-left: 3.125rem;
+}
+
+body::-webkit-scrollbar,
+.modal::-webkit-scrollbar,
+.table::-webkit-scrollbar,
+.asset-table::-webkit-scrollbar,
+.card::-webkit-scrollbar {
+  width: 6px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track,
+.modal::-webkit-scrollbar-track,
+.table::-webkit-scrollbar-track,
+.asset-table::-webkit-scrollbar-track .card::-webkit-scrollbar-track {
+  background: transparent;
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb,
+.modal::-webkit-scrollbar-thumb,
+.table::-webkit-scrollbar-thumb,
+.asset-table::-webkit-scrollbar-thumb,
+.card::-webkit-scrollbar-thumb {
+  background-color: $primary;
+  /* color of the scroll thumb */
+  border-radius: 10px;
+  /* roundness of the scroll thumb */
+  border: 3px solid transparent;
+  /* creates padding around scroll thumb */
+}
 
 .textOnInput {
   position: relative;
@@ -323,6 +384,7 @@ label {
   display: inline-block;
   margin-bottom: .5rem;
 }
+
 
 .form-control {
   box-shadow: none !important;
@@ -364,4 +426,8 @@ label {
 .fms-btn__close.confirm-btn,
 .fms-btn__save.confirm-btn {
   font-weight: 400;
+}
+
+.navbar {
+  width: 100%;
 }

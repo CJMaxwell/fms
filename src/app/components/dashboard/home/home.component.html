@@ -1,3 +1,7 @@
+<section class="d-flex justify-content-end">
+  <div class="hide btn btn-outline-primary me-2">Filters</div>
+  <!-- <fms-filter></fms-filter> -->
+</section>
 <div class="row">
   <div *ngFor="let item of dashboardCards" class="col-md-3">
     <fms-dashboardsummary [title]="item.title" [value]="item.value" [icon]="item.icon" [img]="item.img">

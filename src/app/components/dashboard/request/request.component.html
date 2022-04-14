@@ -1,45 +1,123 @@
 <section class="d-flex justify-content-between align-content-center py-5">
-  <h5 class="default-title">Vehicles</h5>
+  <h5 class="default-title">Requests</h5>
+</section>
+<div class="row">
+  <div *ngFor="let item of dashboardCards" class="col-md-3">
+    <fms-dashboardsummary
+      [title]="item.title"
+      [value]="item.value"
+      [icon]="item.icon"
+      [img]="item.img"
+    >
+    </fms-dashboardsummary>
+  </div>
+</div>
 
-  <section class="">
-    <nav class="container-fluid">
-      <div class="d-flex">
-        <div class="d-flex justify-content-start">
-          <button class="btn shadow-none text-dark px-0" style="margin-right: -2rem; z-index: 20" type="button">
-            <span class="btn-inner--icon"><i class="fas fa-search mx-1" style="color:#7A828A"
-                aria-hidden="true"></i></span>
-          </button>
-          <form class="input-group me-4">
-            <input class="form-control  text-gray searchbar search pl-0" #search (keyup.enter)="(search.value)"
-              style="z-index: 3; width:25vw; color:#7A828A;" type="search" placeholder="Search" aria-label="Search" />
-          </form>
-        </div>
-
-        <div class="d-flex justify-content-end">
-          <img class="me-2 pointer grow" src="assets/img/filter.svg" />
-          <!-- <img class="me-2 pointer grow" src="assets/img/sort.svg" /> -->
-
-          <button type="button" class="grow addNew bg-primary text-white rounded-3" data-bs-toggle="modal"
-            data-bs-target="#newAssetModal">
-            <svg class="me-1" width="19" height="16" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M9.50223 0.855469C10.1334 0.855469 10.6451 1.36714 10.6451 1.99833V8.85547H17.5022C18.1334 8.85547 18.6451 9.36714 18.6451 9.99833C18.6451 10.6295 18.1334 11.1412 17.5022 11.1412H10.6451V17.9983C10.6451 18.6295 10.1334 19.1412 9.50223 19.1412C8.87105 19.1412 8.35937 18.6295 8.35937 17.9983V11.1412H1.50223C0.87105 11.1412 0.359375 10.6295 0.359375 9.99833C0.359375 9.36714 0.87105 8.85547 1.50223 8.85547H8.35937V1.99833C8.35937 1.36714 8.87105 0.855469 9.50223 0.855469Z"
-                fill="white" />
-            </svg>
-            <span>Add New</span>
-          </button>
-        </div>
+<section class="py-3">
+  <nav class="container-fluid">
+    <div class="d-flex">
+      <div class="d-flex justify-content-start">
+        <button
+          class="btn shadow-none text-dark px-0"
+          style="margin-right: -2rem; z-index: 20"
+          type="button"
+        >
+          <span class="btn-inner--icon"
+            ><i
+              class="fas fa-search mx-1"
+              style="color:#7A828A"
+              aria-hidden="true"
+            ></i
+          ></span>
+        </button>
+        <form class="input-group me-4">
+          <input
+            class="form-control  text-gray searchbar search pl-0"
+            #search
+            (keyup.enter)="(search.value)"
+            style="z-index: 3; width:60vw; color:#7A828A;"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </form>
       </div>
-    </nav>
+
+      <div class="d-flex justify-content-end">
+        <img class="me-2 pointer grow" src="assets/img/filter.svg" />
+        <!-- <img class="me-2 pointer grow" src="assets/img/sort.svg" /> -->
+
+        <button
+          type="button"
+          class="grow addNew bg-primary text-white rounded-3"
+          data-bs-toggle="modal"
+          data-bs-target="#newRequestModal"
+        >
+          <svg
+            class="me-1"
+            width="19"
+            height="16"
+            viewBox="0 0 19 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.50223 0.855469C10.1334 0.855469 10.6451 1.36714 10.6451 1.99833V8.85547H17.5022C18.1334 8.85547 18.6451 9.36714 18.6451 9.99833C18.6451 10.6295 18.1334 11.1412 17.5022 11.1412H10.6451V17.9983C10.6451 18.6295 10.1334 19.1412 9.50223 19.1412C8.87105 19.1412 8.35937 18.6295 8.35937 17.9983V11.1412H1.50223C0.87105 11.1412 0.359375 10.6295 0.359375 9.99833C0.359375 9.36714 0.87105 8.85547 1.50223 8.85547H8.35937V1.99833C8.35937 1.36714 8.87105 0.855469 9.50223 0.855469Z"
+              fill="white"
+            />
+          </svg>
+          <span>Add New</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+</section>
+
+<section class="fms-base-size bg-white rounded-3">
+  <p class="hide">Assets</p>
+  <section class="asset-table p-3 overflow-scroll">
+    <table class="table align-items-center ">
+      <thead>
+        <tr>
+          <th scope="col">S/N</th>
+          <th scope="col">Asset ID</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Model</th>
+          <th scope="col">MDA</th>
+          <th scope="col">
+            Manufactured Year
+          </th>
+          <th scope="col">Color</th>
+          <th scope="col">Plate Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let asset of assets; let i = index" class="text-dark user-row">
+          <td class="p-3">{{i+1}}</td>
+          <td class="p-3 text-primary text-decoration-underline">{{asset.id}}</td>
+          <td class="p-3">{{asset.brand}}</td>
+          <td class="p-3">{{asset.model}}</td>
+          <td class="p-3">{{asset.mda}}</td>
+          <td class="p-3">{{asset.year}}</td>
+          <td class="p-3">{{asset.color}}</td>
+          <td class="p-3">{{asset.plateNumber}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="d-flex justify-content-center p-2">
+  </div>
   </section>
+
+
 </section>
 
-<section>
-  <fms-asset-table></fms-asset-table>
-</section>
 
 
-<div class="modal fade" id="newAssetModal" aria-hidden="true" aria-labelledby="newAssetModalLabel" tabindex="-1">
+<!-- MODAL -->
+<div class="modal fade" id="newRequestModal" aria-hidden="true" aria-labelledby="newRequestModalLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -47,8 +125,34 @@
       </div>
       <div class="modal-body">
         <div class="container-fluid">
-          <h5 class="modal-title new-asset" id="newAssetModalLabel">New Asset</h5>
+          <div class="modal-title d-flex justify-content-between">
+            <h5 class="new-asset" id="newRequestModalLabel">New Request</h5>
+          </div>
           <form>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Category</label>
+                  <select class="form-select dropdown-toggle" aria-label="Default select example">
+                    <option selected>Select</option>
+                    <option value="1">Tesla</option>
+                    <option value="2">Mercedes</option>
+                    <option value="3">Range Rover</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Asset Type</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select</option>
+                    <option value="1">Model X</option>
+                    <option value="2">505</option>
+                    <option value="3">GLE</option>
+                  </select>
+                </div>
+              </div>
+            </div>
             <div class="row mb-4">
               <div class="col-md-6">
                 <div class="textOnInput">
@@ -76,7 +180,7 @@
             <div class="row mb-4">
               <div class="col-md-6">
                 <div class="textOnInput">
-                  <label for="inputText">Manufactured year</label>
+                  <label for="inputText">Color</label>
                   <select class="form-select" aria-label="Default select example">
                     <option selected>Select</option>
                     <option value="1">Tesla</option>
@@ -86,121 +190,39 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">color</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Model X</option>
-                    <option value="2">505</option>
-                    <option value="3">GLE</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Class</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Tesla</option>
-                    <option value="2">Mercedes</option>
-                    <option value="3">Range Rover</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Chassis number</label>
+                <div class="textOnInput bg-gray">
+                  <label for="inputText">Plate Number</label>
                   <input class="form-control" type="text" placeholder="Enter">
                 </div>
               </div>
             </div>
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Plate number</label>
-                  <input class="form-control" type="text" placeholder="Enter">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Engine number</label>
-                  <input class="form-control" type="text" placeholder="Enter">
-                </div>
-              </div>
-            </div>
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Year purchased</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Tesla</option>
-                    <option value="2">Mercedes</option>
-                    <option value="3">Range Rover</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Mileage at purchase(km)</label>
-                  <input class="form-control" type="text" placeholder="Enter">
-                </div>
-              </div>
-            </div>
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Mileage current (km)</label>
-                  <input class="form-control" type="text" placeholder="Enter">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Location</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Model X</option>
-                    <option value="2">505</option>
-                    <option value="3">GLE</option>
-                  </select>
-                </div>
-              </div>
-            </div>
+
+
+
             <div class="row mb-5">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <div class="textOnInput">
-                  <label for="inputText">Tag</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select location tag</option>
-                    <option value="1">Tesla</option>
-                    <option value="2">Mercedes</option>
-                    <option value="3">Range Rover</option>
-                  </select>
+                  <label>Description</label>
+                  <textarea
+                    class=" form-control"
+                    cols="100"
+                    placeholder="Maintenance request description"
+                    rows="2"
+                  ></textarea
+                  >
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Assign</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Assign this Asset to a staff</option>
-                    <option value="1">Model X</option>
-                    <option value="2">505</option>
-                    <option value="3">GLE</option>
-                  </select>
-                </div>
-              </div>
+
             </div>
           </form>
         </div>
       </div>
       <div class="modal-footer justify-content-center">
         <!-- data-bs-dismiss="modal" -->
-        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#exampleModalToggle2"
+        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#exampleModalToggle4"
           data-bs-toggle="modal" data-bs-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary text-uppercase fms-btn__save" data-bs-target="#exampleModalToggle3"
-          data-bs-toggle="modal" data-bs-dismiss="modal">Add</button>
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save" data-bs-target="#exampleModalToggle2"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Submit</button>
       </div>
     </div>
   </div>
@@ -252,10 +274,10 @@
       </div>
       <div class="modal-footer justify-content-center">
         <!-- data-bs-dismiss="modal" -->
-        <button type="button" class="btn text-uppercase fms-btn__close confirm-btn" data-bs-target="#newAssetModal"
+        <button type="button" class="btn text-uppercase fms-btn__close confirm-btn" data-bs-target="#newRequestModal"
           data-bs-toggle="modal" data-bs-dismiss="modal">No, cancel</button>
         <button type="button" class="btn btn-primary text-uppercase fms-btn__save confirm-btn"
-          data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Yes, continue</button>
+          data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">Yes, continue</button>
       </div>
     </div>
   </div>
@@ -304,10 +326,65 @@
       </div>
       <div class="modal-footer justify-content-center">
         <!-- data-bs-dismiss="modal" -->
-        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#newAssetModal"
+        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#newRequestModal"
           data-bs-toggle="modal" data-bs-dismiss="modal">Create another</button>
         <button type="button" class="btn btn-primary text-uppercase fms-btn__save bg-success"
           data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5> -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <section class="text-center">
+          <svg class="justify-content-center" width="100" height="100" viewBox="0 0 136 136" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_dd_1277_5524)">
+              <rect x="8" y="4" width="120" height="120" rx="50" fill="white" />
+            </g>
+            <path
+              d="M54.2745 52.93C54.2677 53.0915 54.2939 53.2526 54.3517 53.4036C54.4094 53.5545 54.4974 53.6921 54.6103 53.8077C54.7231 53.9234 54.8585 54.0148 55.008 54.0762C55.1574 54.1377 55.3179 54.1679 55.4795 54.165H59.6045C60.2945 54.165 60.8445 53.6 60.9345 52.915C61.3845 49.635 63.6345 47.245 67.6445 47.245C71.0745 47.245 74.2145 48.96 74.2145 53.085C74.2145 56.26 72.3445 57.72 69.3895 59.94C66.0245 62.385 63.3595 65.24 63.5495 69.875L63.5645 70.96C63.5697 71.288 63.7038 71.6009 63.9376 71.831C64.1715 72.0611 64.4864 72.19 64.8145 72.19H68.8695C69.201 72.19 69.519 72.0583 69.7534 71.8239C69.9878 71.5895 70.1195 71.2715 70.1195 70.94V70.415C70.1195 66.825 71.4845 65.78 75.1695 62.985C78.2145 60.67 81.3895 58.1 81.3895 52.705C81.3895 45.15 75.0095 41.5 68.0245 41.5C61.6895 41.5 54.7495 44.45 54.2745 52.93ZM62.0595 81.745C62.0595 84.41 64.1845 86.38 67.1095 86.38C70.1545 86.38 72.2495 84.41 72.2495 81.745C72.2495 78.985 70.1495 77.045 67.1045 77.045C64.1845 77.045 62.0595 78.985 62.0595 81.745Z"
+              fill="#F2B05C" />
+            <defs>
+              <filter id="filter0_dd_1277_5524" x="0" y="0" width="136" height="136" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha" />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="4" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.380392 0 0 0 0 0.380392 0 0 0 0 0.380392 0 0 0 0.18 0" />
+                <feBlend mode="multiply" in2="BackgroundImageFix" result="effect1_dropShadow_1277_5524" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha" />
+                <feOffset dy="2" />
+                <feGaussianBlur stdDeviation="2" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.380392 0 0 0 0 0.380392 0 0 0 0 0.380392 0 0 0 0.18 0" />
+                <feBlend mode="multiply" in2="effect1_dropShadow_1277_5524" result="effect2_dropShadow_1277_5524" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1277_5524" result="shape" />
+              </filter>
+            </defs>
+          </svg>
+        </section>
+
+
+        <p class="text-center confirm-title">Confirm</p>
+        <p class="text-center confirm-desc">Are you sure you want to cancel</p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <!-- data-bs-dismiss="modal" -->
+        <button type="button" class="btn text-uppercase fms-btn__close confirm-btn" data-bs-target="#newRequestModal"
+          data-bs-toggle="modal" data-bs-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save confirm-btn"
+         data-bs-toggle="modal" data-bs-dismiss="modal">Yes, cancel</button>
       </div>
     </div>
   </div>
