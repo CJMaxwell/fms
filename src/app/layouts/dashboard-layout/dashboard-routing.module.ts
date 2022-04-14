@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DecommissionedComponent } from 'src/app/components/dashboard/assets/decommissioned/decommissioned.component';
+import { MaintenanceDetailComponent } from 'src/app/components/dashboard/assets/maintenance/maintenance-detail/maintenance-detail.component';
 import { MaintenanceComponent } from 'src/app/components/dashboard/assets/maintenance/maintenance.component';
 import { MotorcycleComponent } from 'src/app/components/dashboard/assets/motorcycle/motorcycle.component';
 // import { AssetComponent } from 'src/app/components/dashboard/asset/asset.component';
@@ -31,6 +32,9 @@ const routes: Routes = [
   },
   {
     path: 'assets/maintenance', component: MaintenanceComponent
+  },
+  {
+    path: 'assets/maintenance/:id', component: MaintenanceDetailComponent
   },
   {
     path: 'assets/decommissioned', component: DecommissionedComponent

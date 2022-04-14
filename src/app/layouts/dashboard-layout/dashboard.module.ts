@@ -7,7 +7,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { HomeComponent } from 'src/app/components/dashboard/home/home.component';
 import { DashboardsummaryComponent } from 'src/app/components/dashboard/dashboardsummary/dashboardsummary.component';
 import { ProfileComponent } from '../../components/profile/profile.component';
-import { AssetTableComponent } from '../../components/dahboard/asset-table/asset-table.component';
+import { AssetTableComponent } from '../../components/dashboard/assets/asset-table/asset-table.component';
 import { VehicleComponent } from 'src/app/components/dashboard/assets/vehicle/vehicle.component';
 import { MotorcycleComponent } from '../../components/dashboard/assets/motorcycle/motorcycle.component';
 import { DecommissionedComponent } from '../../components/dashboard/assets/decommissioned/decommissioned.component';
@@ -17,6 +17,7 @@ import { VendorDetailsComponent } from '../../components/dashboard/vendor-detail
 import { FormsModule } from '@angular/forms';
 import { VendorService } from 'src/services/vendor.service';
 import { MaintenanceComponent } from 'src/app/components/dashboard/assets/maintenance/maintenance.component';
+import { MaintenanceDetailComponent } from '../../components/dashboard/assets/maintenance/maintenance-detail/maintenance-detail.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { MaintenanceComponent } from 'src/app/components/dashboard/assets/mainte
     RequestComponent,
     VendorsComponent,
     VendorDetailsComponent,
+    MaintenanceDetailComponent,
   ],
   imports: [
     CommonModule,
@@ -42,8 +44,12 @@ import { MaintenanceComponent } from 'src/app/components/dashboard/assets/mainte
   ],
   exports: [
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProfileComponent,
+    MaintenanceDetailComponent
   ],
-  providers: [VendorService]
+  providers: [
+    VendorService
+  ]
 })
 export class DashboardModule { }
