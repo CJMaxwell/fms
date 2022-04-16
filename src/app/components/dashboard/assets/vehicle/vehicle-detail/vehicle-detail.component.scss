@@ -1,0 +1,32 @@
+input[type="text"] {
+  font-size: 0.8rem;
+}
+
+.vehicle-tab {
+  background: rgba(224, 224, 224, 0.5);
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: #201F1F;
+  background-color: #FFF;
+  border-radius: 16px !important;
+}
+
+.nav-link {
+  color: #616161 !important;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+.assignee-title {
+  color: #A1A1A1;
+}
+
+.no-img {
+  padding-bottom: 7rem;
+}

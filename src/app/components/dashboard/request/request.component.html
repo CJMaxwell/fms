@@ -3,73 +3,39 @@
 </section>
 <div class="row">
   <div *ngFor="let item of dashboardCards" class="col-md-3">
-    <fms-dashboardsummary
-      [title]="item.title"
-      [value]="item.value"
-      [icon]="item.icon"
-      [img]="item.img"
-    >
+    <fms-dashboardsummary [title]="item.title" [value]="item.value" [icon]="item.icon" [img]="item.img">
     </fms-dashboardsummary>
   </div>
 </div>
 
 <section class="py-3">
-  <nav class="container-fluid">
-    <div class="d-flex">
-      <div class="d-flex justify-content-start">
-        <button
-          class="btn shadow-none text-dark px-0"
-          style="margin-right: -2rem; z-index: 20"
-          type="button"
-        >
-          <span class="btn-inner--icon"
-            ><i
-              class="fas fa-search mx-1"
-              style="color:#7A828A"
-              aria-hidden="true"
-            ></i
-          ></span>
-        </button>
-        <form class="input-group me-4">
-          <input
-            class="form-control  text-gray searchbar search pl-0"
-            #search
-            (keyup.enter)="(search.value)"
-            style="z-index: 3; width:60vw; color:#7A828A;"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-        </form>
+  <nav>
+    <div class="row">
+      <div class="col-md-9">
+        <div class="d-flex justify-content-start">
+          <button class="btn shadow-none text-dark px-0" style="margin-right: -2rem; z-index: 20" type="button">
+            <span class="btn-inner--icon"><i class="fas fa-search mx-1" style="color:#7A828A"
+                aria-hidden="true"></i></span>
+          </button>
+          <form class="input-group me-4">
+            <input class="form-control w-100 text-gray searchbar search pl-0" #search (keyup.enter)="(search.value)"
+              style="z-index: 3; color:#7A828A;" type="search" placeholder="Search" aria-label="Search" />
+          </form>
+        </div>
       </div>
-
-      <div class="d-flex justify-content-end">
-        <img class="me-2 pointer grow" src="assets/img/filter.svg" />
-        <!-- <img class="me-2 pointer grow" src="assets/img/sort.svg" /> -->
-
-        <button
-          type="button"
-          class="grow addNew bg-primary text-white rounded-3"
-          data-bs-toggle="modal"
-          data-bs-target="#newRequestModal"
-        >
-          <svg
-            class="me-1"
-            width="19"
-            height="16"
-            viewBox="0 0 19 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M9.50223 0.855469C10.1334 0.855469 10.6451 1.36714 10.6451 1.99833V8.85547H17.5022C18.1334 8.85547 18.6451 9.36714 18.6451 9.99833C18.6451 10.6295 18.1334 11.1412 17.5022 11.1412H10.6451V17.9983C10.6451 18.6295 10.1334 19.1412 9.50223 19.1412C8.87105 19.1412 8.35937 18.6295 8.35937 17.9983V11.1412H1.50223C0.87105 11.1412 0.359375 10.6295 0.359375 9.99833C0.359375 9.36714 0.87105 8.85547 1.50223 8.85547H8.35937V1.99833C8.35937 1.36714 8.87105 0.855469 9.50223 0.855469Z"
-              fill="white"
-            />
-          </svg>
-          <span>Add New</span>
-        </button>
+      <div class="col-md-3">
+        <div class="d-flex justify-content-end">
+          <img class="me-2 pointer grow" src="assets/img/filter.svg" />
+          <button type="button" class="grow addNew bg-primary text-white rounded-3" data-bs-toggle="modal"
+            data-bs-target="#newRequestModal">
+            <svg class="me-1" width="19" height="16" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M9.50223 0.855469C10.1334 0.855469 10.6451 1.36714 10.6451 1.99833V8.85547H17.5022C18.1334 8.85547 18.6451 9.36714 18.6451 9.99833C18.6451 10.6295 18.1334 11.1412 17.5022 11.1412H10.6451V17.9983C10.6451 18.6295 10.1334 19.1412 9.50223 19.1412C8.87105 19.1412 8.35937 18.6295 8.35937 17.9983V11.1412H1.50223C0.87105 11.1412 0.359375 10.6295 0.359375 9.99833C0.359375 9.36714 0.87105 8.85547 1.50223 8.85547H8.35937V1.99833C8.35937 1.36714 8.87105 0.855469 9.50223 0.855469Z"
+                fill="white" />
+            </svg>
+            <span>Add New</span>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
@@ -77,7 +43,7 @@
 
 <section class="fms-base-size bg-white rounded-3">
   <p class="hide">Assets</p>
-  <section class="asset-table p-3 overflow-scroll">
+  <section class="asset-table p-3">
     <table class="table align-items-center ">
       <thead>
         <tr>
@@ -108,7 +74,7 @@
     </table>
 
     <div class="d-flex justify-content-center p-2">
-  </div>
+    </div>
   </section>
 
 
@@ -203,13 +169,8 @@
               <div class="col-md-12">
                 <div class="textOnInput">
                   <label>Description</label>
-                  <textarea
-                    class=" form-control"
-                    cols="100"
-                    placeholder="Maintenance request description"
-                    rows="2"
-                  ></textarea
-                  >
+                  <textarea class=" form-control" cols="100" placeholder="Maintenance request description"
+                    rows="2"></textarea>
                 </div>
               </div>
 
@@ -383,8 +344,8 @@
         <!-- data-bs-dismiss="modal" -->
         <button type="button" class="btn text-uppercase fms-btn__close confirm-btn" data-bs-target="#newRequestModal"
           data-bs-toggle="modal" data-bs-dismiss="modal">No</button>
-        <button type="button" class="btn btn-primary text-uppercase fms-btn__save confirm-btn"
-         data-bs-toggle="modal" data-bs-dismiss="modal">Yes, cancel</button>
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save confirm-btn" data-bs-toggle="modal"
+          data-bs-dismiss="modal">Yes, cancel</button>
       </div>
     </div>
   </div>

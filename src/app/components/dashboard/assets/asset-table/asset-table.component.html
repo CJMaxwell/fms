@@ -10,7 +10,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let asset of assets; let i = index" class="text-dark user-row">
+        <tr [routerLink]="['/dashboard/assets/vehicles/1']" *ngFor=" let asset of assets; let i=index"
+          class="text-dark user-row cursor-pointer">
           <td class="p-3">{{i+1}}</td>
           <td class="p-3 text-primary text-decoration-underline">{{asset.id}}</td>
           <td class="p-3">{{asset.brand}}</td>
