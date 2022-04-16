@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { VendorService } from 'src/services/vendor.service';
 import { MaintenanceComponent } from 'src/app/components/dashboard/assets/maintenance/maintenance.component';
 import { MaintenanceDetailComponent } from '../../components/dashboard/assets/maintenance/maintenance-detail/maintenance-detail.component';
+import { VehicleDetailComponent } from '../../components/dashboard/assets/vehicle/vehicle-detail/vehicle-detail.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { MaintenanceDetailComponent } from '../../components/dashboard/assets/ma
     VendorsComponent,
     VendorDetailsComponent,
     MaintenanceDetailComponent,
+    VehicleDetailComponent,
   ],
   imports: [
     CommonModule,

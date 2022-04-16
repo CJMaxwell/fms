@@ -4,6 +4,7 @@ import { DecommissionedComponent } from 'src/app/components/dashboard/assets/dec
 import { MaintenanceDetailComponent } from 'src/app/components/dashboard/assets/maintenance/maintenance-detail/maintenance-detail.component';
 import { MaintenanceComponent } from 'src/app/components/dashboard/assets/maintenance/maintenance.component';
 import { MotorcycleComponent } from 'src/app/components/dashboard/assets/motorcycle/motorcycle.component';
+import { VehicleDetailComponent } from 'src/app/components/dashboard/assets/vehicle/vehicle-detail/vehicle-detail.component';
 // import { AssetComponent } from 'src/app/components/dashboard/asset/asset.component';
 import { VehicleComponent } from 'src/app/components/dashboard/assets/vehicle/vehicle.component';
 import { HomeComponent } from 'src/app/components/dashboard/home/home.component';
@@ -26,6 +27,9 @@ const routes: Routes = [
   },
   {
     path: 'assets/vehicles', component: VehicleComponent
+  },
+  {
+    path: 'assets/vehicles/:id', component: VehicleDetailComponent
   },
   {
     path: 'assets/motorcycles', component: MotorcycleComponent

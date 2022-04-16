@@ -442,3 +442,13 @@ label {
 .text-gray-dark {
   color: $gray-dark;
 }
+
+.maint-card {
+  padding: 2rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
