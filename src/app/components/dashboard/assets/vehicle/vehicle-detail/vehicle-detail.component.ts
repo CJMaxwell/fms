@@ -1,4 +1,4 @@
-import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'fms-vehicle-detail',
@@ -88,9 +88,6 @@ export class VehicleDetailComponent implements OnInit {
 
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    console.log(changes, 'changes')
-  }
 
   filterUsersByFirstLetter(e: any): void {
     if (e.target.id != '') {
@@ -99,9 +96,7 @@ export class VehicleDetailComponent implements OnInit {
   }
 
   setSelectedUser(user: any) {
-    console.log(user.name, 'identified');
     this.newAssignee = user.name;
-    console.log(this.newAssignee, 'Assignee');
   }
 
 }
