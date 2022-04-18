@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'fms-vehicle-detail',
@@ -45,9 +45,63 @@ export class VehicleDetailComponent implements OnInit {
 
   ];
 
+  alphabets = [
+    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
+    'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+    'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
+    'Y', 'Z'
+  ];
+
+  userHeaders = [
+    'S/N', 'Name', 'MDA'
+  ];
+
+  users = [
+    {
+      name: 'Stanley Igwe',
+      mda: 'Ministry of Finance'
+    },
+    {
+      name: 'Tombore Tambolo',
+      mda: 'Ministry of Housing'
+    },
+    {
+      name: 'Opetunde Adepoju',
+      mda: 'Governor’s Convoy'
+    },
+    {
+      name: 'Dara Komolafe',
+      mda: 'Governor’s Lodge- Main residence'
+    },
+    {
+      name: 'Chidinma Okorie',
+      mda: 'Ministry of Finance'
+    },
+  ];
+
+  tabIndex: number = 0;
+  newAssignee: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes, 'changes')
+  }
+
+  filterUsersByFirstLetter(e: any): void {
+    if (e.target.id != '') {
+      this.tabIndex = +e.target.id;
+    }
+  }
+
+  setSelectedUser(user: any) {
+    console.log(user.name, 'identified');
+    this.newAssignee = user.name;
+    console.log(this.newAssignee, 'Assignee');
   }
 
 }
