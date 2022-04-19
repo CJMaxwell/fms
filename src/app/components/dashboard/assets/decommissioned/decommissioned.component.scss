@@ -1,0 +1,77 @@
+.new-asset {
+  margin-bottom: 0 !important;
+}
+
+
+select,
+input.form-control {
+  padding: 12px !important;
+}
+
+
+.fms-btn__plain {
+  padding: 0.55rem !important;
+  margin-top: 0 !important;
+}
+
+.fms-btn__selected {
+  background-color: #282B80 !important;
+  color: #FFF !important;
+  padding: 0.2rem 0.55rem !important;
+  margin-top: 0 !important;
+  border-radius: 0.2rem !important;
+}
+
+
+.input-group-text,
+.form-control.form-input {
+  background-color: #F5F5F5;
+  border-color: #d0d5dd !important;
+  border-style: solid;
+}
+
+.input-group-text {
+  border-width: 1px 0px 1px 1px !important;
+}
+
+.form-control.form-input {
+  border-width: 1px 1px 1px 0px !important;
+}
+
+.user-selection-table {
+  background-color: #FBFBFB;
+  padding: 1.25rem;
+}
+
+input[type=text] {
+  padding-top: 10px;
+}
+
+label.form-check-label {
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.decommission-check {
+  color: #9F3A28;
+}
+
+.form-check-input:checked {
+  background-color: #282B80 !important;
+  border-color: #282B80 !important;
+}
+
+input#decommission {
+  padding: 8px;
+  margin-right: 6px;
+}
+
+.check-container {
+  display: flex;
+  align-items: center;
+}
+
+input.form-control.decom {
+  font-size: 12px;
+}

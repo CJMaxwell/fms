@@ -17,171 +17,39 @@
 
 
 <div class="modal fade" id="newAssetModal" aria-hidden="true" aria-labelledby="newAssetModalLabel" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-xl">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="container-fluid">
-          <h5 class="modal-title new-asset" id="newAssetModalLabel">New Asset</h5>
-          <form>
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Manufacturer</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Tesla</option>
-                    <option value="2">Mercedes</option>
-                    <option value="3">Range Rover</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Model</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Model X</option>
-                    <option value="2">505</option>
-                    <option value="3">GLE</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Manufactured year</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Tesla</option>
-                    <option value="2">Mercedes</option>
-                    <option value="3">Range Rover</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">color</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Model X</option>
-                    <option value="2">505</option>
-                    <option value="3">GLE</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Class</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Tesla</option>
-                    <option value="2">Mercedes</option>
-                    <option value="3">Range Rover</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Chassis number</label>
-                  <input class="form-control" type="text" placeholder="Enter">
-                </div>
-              </div>
-            </div>
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Plate number</label>
-                  <input class="form-control" type="text" placeholder="Enter">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Engine number</label>
-                  <input class="form-control" type="text" placeholder="Enter">
-                </div>
-              </div>
-            </div>
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Year purchased</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Tesla</option>
-                    <option value="2">Mercedes</option>
-                    <option value="3">Range Rover</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Mileage at purchase(km)</label>
-                  <input class="form-control" type="text" placeholder="Enter">
-                </div>
-              </div>
-            </div>
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Mileage current (km)</label>
-                  <input class="form-control" type="text" placeholder="Enter">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Location</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Model X</option>
-                    <option value="2">505</option>
-                    <option value="3">GLE</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row mb-5">
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Tag</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select location tag</option>
-                    <option value="1">Tesla</option>
-                    <option value="2">Mercedes</option>
-                    <option value="3">Range Rover</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">Assign</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Assign this Asset to a staff</option>
-                    <option value="1">Model X</option>
-                    <option value="2">505</option>
-                    <option value="3">GLE</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </form>
+          <h5 class="modal-title new-asset" id="newAssetModalLabel">Asset</h5>
+          <p>Select the decommissioned asset category to continue</p>
+
+          <section class="d-flex justify-content-center align-content-center">
+            <section role="button" data-bs-target="#assetSelectionModal" data-bs-toggle="modal" data-bs-dismiss="modal">
+              <img src="assets/img/decom-vehicle.png" alt="Vehicle">
+            </section>
+            <section role="button" data-bs-target="#assetSelectionModal" data-bs-toggle="modal" data-bs-dismiss="modal">
+              <img src="assets/img/decom-motorcycle.png" alt="Vehicle">
+            </section>
+          </section>
+
         </div>
       </div>
       <div class="modal-footer justify-content-center">
         <!-- data-bs-dismiss="modal" -->
         <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#exampleModalToggle2"
           data-bs-toggle="modal" data-bs-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary text-uppercase fms-btn__save" data-bs-target="#exampleModalToggle3"
-          data-bs-toggle="modal" data-bs-dismiss="modal">Add</button>
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save" data-bs-target="#assetSelectionModal"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
       </div>
     </div>
   </div>
 </div>
+
+
 
 <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
   tabindex="-1">
@@ -285,6 +153,129 @@
           data-bs-toggle="modal" data-bs-dismiss="modal">Create another</button>
         <button type="button" class="btn btn-primary text-uppercase fms-btn__save bg-success"
           data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Decommission -->
+
+<div class="modal fade" id="assetSelectionModal" aria-hidden="true" aria-labelledby="assetSelectionModalLabel"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <h5 class="modal-title new-asset" id="assetSelectionModalLabel">Assign New User</h5>
+          <div>
+            <button [ngClass]="{'fms-btn__selected': tabIndex === i}" class="fms-btn__plain"
+              (click)="filterUsersByFirstLetter($event)" *ngFor="let alphabet of alphabets; let i = index"
+              [id]="i">{{alphabet}}</button>
+          </div>
+          <form>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="search">
+                    <svg width="14" height="15" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.46875 8.75C6.55708 8.75 8.25 7.05708 8.25 4.96875C8.25 2.88042 6.55708 1.1875 4.46875 1.1875C2.38042 1.1875 0.6875 2.88042 0.6875 4.96875C0.6875 7.05708 2.38042 8.75 4.46875 8.75ZM8.9375 4.96875C8.9375 7.43677 6.93677 9.4375 4.46875 9.4375C2.00073 9.4375 0 7.43677 0 4.96875C0 2.50073 2.00073 0.5 4.46875 0.5C6.93677 0.5 8.9375 2.50073 8.9375 4.96875Z"
+                        fill="#7A828A" />
+                      <path
+                        d="M7.11142 8.57274C7.1317 8.60023 7.15428 8.62655 7.17917 8.65144L9.82637 11.2986C10.0949 11.5671 10.5302 11.5671 10.7986 11.2986C11.0671 11.0302 11.0671 10.5949 10.7986 10.3264L8.15144 7.67917C8.12655 7.65428 8.10023 7.6317 8.07274 7.61142C7.80305 7.9786 7.4786 8.30305 7.11142 8.57274Z"
+                        fill="#7A828A" />
+                    </svg>
+                  </span>
+                  <input type="text" class="form-control form-input" placeholder="Search" aria-label="search"
+                    aria-describedby="search">
+                </div>
+
+              </div>
+            </div>
+          </form>
+          <section class="user-selection-table">
+            <table class="table align-items-center">
+              <thead>
+                <tr>
+                  <th *ngFor="let decomHeader of decomHeaders" scope="col">
+                    {{decomHeader}}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr (click)="setSelectedUser(decomAsset)" role="button" data-bs-target="#decommissionAssetModal"
+                  data-bs-toggle="modal" data-bs-dismiss="modal" *ngFor=" let decomAsset of decomAssets; let i=index"
+                  class="text-dark user-row cursor-pointer">
+                  <td class="p-3">{{i+1}}</td>
+                  <td class="p-3">{{decomAsset.assetId}}</td>
+                  <td class="p-3">{{decomAsset.brand}}</td>
+                  <td class="p-3">{{decomAsset.model}}</td>
+                  <td class="p-3">{{decomAsset.manufacturedYear}}</td>
+                  <td class="p-3">{{decomAsset.plateNumber}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-end me-2">
+        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#assignModal"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Back</button>
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save"
+          data-bs-target="#decommissionAssetModal" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Decommission -->
+
+<div class="modal fade" id="decommissionAssetModal" aria-hidden="true" aria-labelledby="decommissionAssetModalLabel"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <h5 class="modal-title new-asset" id="decommissionAssetModalLabel">Decommission Asset</h5>
+          <form class="mt-4">
+            <div class="row mb-4">
+              <div class="col-md-12">
+                <div class="textOnInput">
+                  <input class="form-control" disabled type="text" value="Mitsubishi Pajero 2009">
+                </div>
+              </div>
+              <div class="col-md-12 mt-4">
+                <div class="textOnInput">
+                  <label for="inputText">Reason for decommissioning</label>
+                  <input class="form-control py-4 decom"
+                    value="Please explain the reason(s) for decommissioning this asset" type="text" placeholder="Enter">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="mt-4 check-container">
+                  <input type="checkbox" class="form-check-input" id="decommission">
+                  <label class="form-check-label" for="decommission"><span
+                      class="decommission-check">Decommissioning</span> a vehicle is irreversible and cannot be undone.
+                    Please tick the box to confirm this action.</label>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <!-- data-bs-dismiss="modal" -->
+        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#exampleModalToggle2"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save" data-bs-target="#exampleModalToggle3"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Decommission</button>
       </div>
     </div>
   </div>
