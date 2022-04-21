@@ -1,0 +1,16 @@
+
+.alpha-selector {
+    display: block;
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+    color: #414141;
+    text-decoration:solid;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+}
+.alpha-selector:hover {
+  color: #fff;
+  background-color: #414141;
+  border-color: #414141;
+  border-radius: 3px;
+}

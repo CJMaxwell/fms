@@ -18,7 +18,11 @@ import { FormsModule } from '@angular/forms';
 import { VendorService } from 'src/services/vendor.service';
 import { MaintenanceComponent } from 'src/app/components/dashboard/assets/maintenance/maintenance.component';
 import { MaintenanceDetailComponent } from '../../components/dashboard/assets/maintenance/maintenance-detail/maintenance-detail.component';
+import { UserDetailsComponent } from '../../components/dashboard/user-details/user-details.component';
+import { UsersComponent } from '../../components/dashboard/users/users.component';
+import { NgbPagination, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { VehicleDetailComponent } from '../../components/dashboard/assets/vehicle/vehicle-detail/vehicle-detail.component';
+
 
 
 @NgModule({
@@ -35,6 +39,8 @@ import { VehicleDetailComponent } from '../../components/dashboard/assets/vehicl
     VendorsComponent,
     VendorDetailsComponent,
     MaintenanceDetailComponent,
+    UserDetailsComponent,
+    UsersComponent,
     VehicleDetailComponent,
   ],
   imports: [
@@ -42,6 +48,7 @@ import { VehicleDetailComponent } from '../../components/dashboard/assets/vehicl
     DashboardRoutingModule,
     SharedModule,
     FormsModule,
+    NgbPaginationModule
 
   ],
   exports: [

@@ -1,26 +1,63 @@
 <section class="d-flex justify-content-between align-content-center py-5">
-  <h5 class="default-title">Vendors ID:{{vendor[0].Id}}</h5>
+  <h5 class="default-title">Users ({{total}})</h5>
 
   <section class="">
     <nav class="container-fluid">
       <div class="d-flex">
-        <div class="d-flex justify-content-end">
-          <button type="button" class="grow addNew me-2 text-white bg-primary rounded-3" (click)="back()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="#ffffff" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round">
-              <path d="M19 12H6M12 5l-7 7 7 7" />
-            </svg>
-            Back to Vendors
+        <div class="d-flex justify-content-start">
+          <button
+            class="btn shadow-none text-dark px-0"
+            style="margin-right: -2rem; z-index: 20"
+            type="button"
+          >
+            <span class="btn-inner--icon"
+              ><i
+                class="fas fa-search mx-1"
+                style="color:#7A828A"
+                aria-hidden="true"
+              ></i
+            ></span>
           </button>
+          <form class="input-group me-4">
+            <input
+              class="form-control  text-gray searchbar search pl-0"
+              #search
+              (keyup.enter)="(search.value)"
+              style="z-index: 3; width:25vw; color:#7A828A;"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              [(ngModel)]='listFilter'[ngModelOptions]="{standalone: true}"
+            />
+          </form>
+        </div>
 
-          <button type="button" class="grow addNew bg-primary text-white rounded-3" data-bs-toggle="modal"
-            data-bs-target="#newVendorModal">
-            <svg class="me-1" width="19" height="16" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
+        <div class="d-flex justify-content-end">
+          <img class="me-2 pointer grow" src="assets/img/filter.svg" />
+          <!-- <img class="me-2 pointer grow" src="vendors/img/sort.svg" /> -->
+
+          <button
+            type="button"
+            class="grow addNew bg-primary text-white rounded-3"
+            data-bs-toggle="modal"
+            data-bs-target="#newUserModal"
+          >
+            <svg
+              class="me-1"
+              width="19"
+              height="16"
+              viewBox="0 0 19 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
                 d="M9.50223 0.855469C10.1334 0.855469 10.6451 1.36714 10.6451 1.99833V8.85547H17.5022C18.1334 8.85547 18.6451 9.36714 18.6451 9.99833C18.6451 10.6295 18.1334 11.1412 17.5022 11.1412H10.6451V17.9983C10.6451 18.6295 10.1334 19.1412 9.50223 19.1412C8.87105 19.1412 8.35937 18.6295 8.35937 17.9983V11.1412H1.50223C0.87105 11.1412 0.359375 10.6295 0.359375 9.99833C0.359375 9.36714 0.87105 8.85547 1.50223 8.85547H8.35937V1.99833C8.35937 1.36714 8.87105 0.855469 9.50223 0.855469Z"
-                fill="white" />
+                fill="white"
+              />
             </svg>
-            <span>Edit</span>
+            <span>Add New</span>
           </button>
         </div>
       </div>
@@ -28,106 +65,48 @@
   </section>
 </section>
 
+
+
+
 <section class="fms-base-size bg-white rounded-3">
-  <div class="col-md-12">
-    <div class="row bg-white p-5 fms-rounded">
-      <div class="col-md-12">
-        <p class="mt-title text-base fw-bold">Information</p>
-        <section class="mt-3">
-          <div class=" align-items-center mb-2">
-            <div class="row">
-              <div class="row col-md-6">
-                <div class="col-md-2">
-                  <label for="name" class="col-form-label">Full Name</label>
-                </div>
-                <div class="col-md-10">
-                  <div class=" form-control" disabled="true" placeholder="Company" type="text" value="Flour Mills">
-                    {{vendor[0].FirstName+' '+vendor[0].LastName}}</div>
-                </div>
-              </div>
+  <p class="hide">users</p>
+  <section class="asset-table p-3 overflow-scroll">
+    <table class="table align-items-center ">
+      <thead>
+        <tr>
+          <th scope="col">S/N</th>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Asset Type</th>
+          <th scope="col">Phone Number</th>
+          <th scope="col">Email Address</th>
+          <th scope="col">Date Added</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users2; let i = index"  class="text-dark user-row pointer" [routerLink]="[user.Id]">
+          <td class="p-3">{{i+1}}</td>
+          <td class="p-3 ">{{user.FirstName+' '+user.LastName}}</td>
+          <td class="p-3">{{user.Address}}</td>
+          <td class="p-3">{{user.assetType}}</td>
+          <td class="p-3">{{user.PhoneNumber}}</td>
+          <td class="p-3">{{user.Email}}</td>
+          <td class="p-3">{{user.dateAdded|date:'medium'}}</td>
+        </tr>
+      </tbody>
+    </table>
 
-              <div class="row col-md-6">
-                <div class="col-md-2">
-                  <label for="name" class="col-form-label">Company Address </label>
-
-
-                </div>
-                <div class="col-md-10">
-                  <div class=" form-control">{{vendor[0].Address}}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="align-items-center mb-2">
-            <div class="row">
-              <div class="row col-md-6">
-                <div class="col-md-2">
-                  <label for="name" class="col-form-label">State</label>
-                </div>
-                <div class="col-md-10">
-                  <div class=" form-control">{{vendor[0].State}}</div>
-
-                </div>
-              </div>
-
-              <div class="row col-md-6">
-                <div class="col-md-2">
-                  <label for="name" class="col-form-label">Phone Number</label>
-                </div>
-                <div class="col-md-10">
-                  <div class=" form-control">{{vendor[0].PhoneNumber}}</div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class=" align-items-center ">
-            <div class="row">
-              <div class="row col-md-6">
-                <div class="col-md-2">
-                  <label for="name" class="col-form-label">Email Address</label>
-                </div>
-                <div class="col-md-10">
-                  <div class=" form-control">{{vendor[0].Email}}</div>
-                </div>
-              </div>
-
-              <div class="row col-md-6">
-                <div class="col-md-2">
-                  <label for="name" class="col-form-label">Speciality</label>
-                </div>
-                <div class="col-md-10">
-                  <div class=" form-control">{{vendor[0].assetType}}</div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-
-
+    <div class="d-flex justify-content-center p-2">
   </div>
+  </section>
+
+
 </section>
 
-<section class=" fms-base-size  bg-white rounded-3 mt-5 mb-lg-5">
-  <div class="row bg-white fms-rounded p-5 maint-card">
-    <div class="col-md-12">
-      <p class=" text-base fw-bold mt-title">History</p>
-      <section class="text-center mt-5">
-        <img src="assets/img/no-details.svg" alt="No details">
-        <p class="mt-4 text-base">There is currently no history available <br>
-          for this vendor</p>
-      </section>
-    </div>
-  </div>
-</section>
+
 
 <!-- MODAL -->
-<div class="modal fade" id="newVendorModal" aria-hidden="true" aria-labelledby="newVendorModalLabel" tabindex="-1">
+<div class="modal fade" id="newUserModal" aria-hidden="true" aria-labelledby="newUserModalLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -136,95 +115,113 @@
       <div class="modal-body">
         <div class="container-fluid">
           <div class="modal-title d-flex justify-content-between">
-            <h5 class="new-vendor" id="newVendorModalLabel">New Vendor</h5>
+            <h5 class="new-user" id="newUserModalLabel">New User</h5>
           </div>
-          <form>
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="firstName">First Name</label>
-                  <input type="text" class="form-control" id="firstName" placeholder="First Name" />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="lastName">Last Name</label>
-                  <input type="text" class="form-control" id="lastName" placeholder="Last Name" />
-                </div>
-              </div>
-            </div>
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="companyAddress">Company Address</label>
-                  <input type="text" class="form-control" id="companyAddress" placeholder="Company Address" />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">State</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Model X</option>
-                    <option value="2">505</option>
-                    <option value="3">GLE</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">LGA</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Tesla</option>
-                    <option value="2">Mercedes</option>
-                    <option value="3">Range Rover</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="textOnInput bg-gray">
-                  <label for="phoneNumber">Phone Number</label>
-                  <input class="form-control" type="text" placeholder="+(234)-8030000" />
-                </div>
-              </div>
-            </div>
 
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="textOnInput bg-gray">
-                  <label for="email">Email Address</label>
-                  <input class="form-control" type="text" placeholder="Email" />
-                </div>
-              </div>
+          <nav class="m-3 nav text-center text-xs">
+            <a class="alpha-selector active" >A</a>
+            <a class="alpha-selector" >B</a>
+            <a class="alpha-selector" >C</a>
+            <a class="alpha-selector" >D</a>
+            <a class="alpha-selector" >E</a>
+            <a class="alpha-selector" >F</a>
+            <a class="alpha-selector" >G</a>
+            <a class="alpha-selector" >H</a>
+            <a class="alpha-selector" >I</a>
+            <a class="alpha-selector" >J</a>
+            <a class="alpha-selector" >K</a>
+            <a class="alpha-selector" >L</a>
+            <a class="alpha-selector" >M</a>
+            <a class="alpha-selector" >N</a>
+            <a class="alpha-selector" >O</a>
+            <a class="alpha-selector" >P</a>
+            <a class="alpha-selector" >Q</a>
+            <a class="alpha-selector" >R</a>
+            <a class="alpha-selector" >S</a>
+            <a class="alpha-selector" >T</a>
+            <a class="alpha-selector" >U</a>
+            <a class="alpha-selector" >V</a>
+            <a class="alpha-selector" >W</a>
+            <a class="alpha-selector" >X</a>
+            <a class="alpha-selector" >Y</a>
+            <a class="alpha-selector" >Z</a>
 
-              <div class="col-md-6">
-                <div class="textOnInput">
-                  <label for="inputText">vendor Type</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Bikes</option>
-                    <option value="2">Vehicles</option>
-                    <option value="3">...</option>
-                  </select>
-                </div>
-              </div>
+          </nav>
+          <section>
+            <div class="d-flex justify-content-start">
+              <button
+                class="btn shadow-none text-dark px-0"
+                style="margin-right: -2rem; z-index: 20"
+                type="button"
+              >
+                <span class="btn-inner--icon"
+                  ><i
+                    class="fas fa-search mx-1"
+                    style="color:#7A828A"
+                    aria-hidden="true"
+                  ></i
+                ></span>
+              </button>
+              <form class="input-group me-4">
+                <input
+                  class="form-control  text-gray searchbar2 search pl-0"
+                  #search
+                  (keyup.enter)="(search.value)"
+                  style="z-index: 3; width:25vw; color:#3e3e3f;"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                  [(ngModel)]='listFilter'[ngModelOptions]="{standalone: true}"
+                />
+              </form>
             </div>
-          </form>
+          </section>
+
+          <section class="asset-table p-3">
+            <table class="table align-items-center">
+              <thead>
+                <tr>
+                  <th *ngFor="let userHeader of userHeaders" scope="col">
+                    {{userHeader}}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of adUsers; let i = index" class="text-dark user-row">
+                  <td class="p-3">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="defaultCheck1"
+                      [checked]="user.selected"
+                      (change)="onChange($event, user)"/>
+                  </td>
+                  <td class="p-3">{{i+1}}</td>
+                  <td class="p-3">{{user.FirstName+' '+user.LastName}}</td>
+                  <td class="p-3">{{user.Mda}}</td>
+
+                </tr>
+              </tbody>
+            </table>
+
+           <!-- <div class="d-flex justify-content-center p-2">
+            <ngb-pagination [collectionSize]="120" [(page)]="page" [pageSize]="pageSize" [maxSize]="3"
+              (pageChange)="filterData()">
+
+              <ng-template ngbPaginationEllipsis>...</ng-template>
+              <ng-template ngbPaginationNumber let-page class="bg-primary">{{ page }}</ng-template>
+            </ngb-pagination>
+          </div> -->
+          </section>
+
         </div>
       </div>
       <div class="modal-footer justify-content-center">
         <!-- data-bs-dismiss="modal" -->
         <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#exampleModalToggle4"
-          data-bs-toggle="modal" data-bs-dismiss="modal">
-          Cancel
-        </button>
+          data-bs-toggle="modal" data-bs-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-primary text-uppercase fms-btn__save" data-bs-target="#exampleModalToggle2"
-          data-bs-toggle="modal" data-bs-dismiss="modal">
-          Submit
-        </button>
+          data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
       </div>
     </div>
   </div>
@@ -270,21 +267,16 @@
           </svg>
         </section>
 
+
         <p class="text-center confirm-title">Confirm</p>
-        <p class="text-center confirm-desc">
-          Are you sure you want to continue
-        </p>
+        <p class="text-center confirm-desc">Are you sure you want to continue</p>
       </div>
       <div class="modal-footer justify-content-center">
         <!-- data-bs-dismiss="modal" -->
-        <button type="button" class="btn text-uppercase fms-btn__close confirm-btn" data-bs-target="#newVendorModal"
-          data-bs-toggle="modal" data-bs-dismiss="modal">
-          No, cancel
-        </button>
+        <button type="button" class="btn text-uppercase fms-btn__close confirm-btn" data-bs-target="#newUserModal"
+          data-bs-toggle="modal" data-bs-dismiss="modal">No, cancel</button>
         <button type="button" class="btn btn-primary text-uppercase fms-btn__save confirm-btn"
-          data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">
-          Yes, continue
-        </button>
+          data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">Yes, continue</button>
       </div>
     </div>
   </div>
@@ -329,20 +321,14 @@
           </svg>
         </section>
         <p class="text-center confirm-title">Success</p>
-        <p class="text-center confirm-desc">
-          New vendor has been added successfully
-        </p>
+        <p class="text-center confirm-desc">New user has been added successfully</p>
       </div>
       <div class="modal-footer justify-content-center">
         <!-- data-bs-dismiss="modal" -->
-        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#newVendorModal"
-          data-bs-toggle="modal" data-bs-dismiss="modal">
-          Create another
-        </button>
+        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#newUserModal"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Create another</button>
         <button type="button" class="btn btn-primary text-uppercase fms-btn__save bg-success"
-          data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">
-          Continue
-        </button>
+          data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">Continue</button>
       </div>
     </div>
   </div>
@@ -388,20 +374,19 @@
           </svg>
         </section>
 
+
         <p class="text-center confirm-title">Confirm</p>
         <p class="text-center confirm-desc">Are you sure you want to cancel</p>
       </div>
       <div class="modal-footer justify-content-center">
         <!-- data-bs-dismiss="modal" -->
-        <button type="button" class="btn text-uppercase fms-btn__close confirm-btn" data-bs-target="#newVendorModal"
-          data-bs-toggle="modal" data-bs-dismiss="modal">
-          No
-        </button>
-        <button type="button" class="btn btn-primary text-uppercase fms-btn__save confirm-btn" data-bs-toggle="modal"
-          data-bs-dismiss="modal">
-          Yes, cancel
-        </button>
+        <button type="button" class="btn text-uppercase fms-btn__close confirm-btn" data-bs-target="#newUserModal"
+          data-bs-toggle="modal" data-bs-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save confirm-btn"
+         data-bs-toggle="modal" data-bs-dismiss="modal">Yes, cancel</button>
       </div>
     </div>
   </div>
 </div>
+
+

@@ -1,26 +1,23 @@
 <section class="d-flex justify-content-between align-content-center py-5">
-  <h5 class="default-title">Vendors ID:{{vendor[0].Id}}</h5>
+  <h5 class="default-title">Users ID:{{user[0].Id}}</h5>
 
   <section class="">
     <nav class="container-fluid">
       <div class="d-flex">
         <div class="d-flex justify-content-end">
           <button type="button" class="grow addNew me-2 text-white bg-primary rounded-3" (click)="back()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="#ffffff" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round">
-              <path d="M19 12H6M12 5l-7 7 7 7" />
-            </svg>
-            Back to Vendors
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"><path d="M19 12H6M12 5l-7 7 7 7"/></svg>
+            Back to users
           </button>
 
-          <button type="button" class="grow addNew bg-primary text-white rounded-3" data-bs-toggle="modal"
-            data-bs-target="#newVendorModal">
-            <svg class="me-1" width="19" height="16" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <button type="button" class="grow addNew bg-outline-primary rounded-3" data-bs-toggle="modal"
+            data-bs-target="#newuserModal">
+            <!-- <svg class="me-1" width="19" height="16" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M9.50223 0.855469C10.1334 0.855469 10.6451 1.36714 10.6451 1.99833V8.85547H17.5022C18.1334 8.85547 18.6451 9.36714 18.6451 9.99833C18.6451 10.6295 18.1334 11.1412 17.5022 11.1412H10.6451V17.9983C10.6451 18.6295 10.1334 19.1412 9.50223 19.1412C8.87105 19.1412 8.35937 18.6295 8.35937 17.9983V11.1412H1.50223C0.87105 11.1412 0.359375 10.6295 0.359375 9.99833C0.359375 9.36714 0.87105 8.85547 1.50223 8.85547H8.35937V1.99833C8.35937 1.36714 8.87105 0.855469 9.50223 0.855469Z"
                 fill="white" />
-            </svg>
-            <span>Edit</span>
+            </svg> -->
+            <span>Update</span>
           </button>
         </div>
       </div>
@@ -42,18 +39,17 @@
                 </div>
                 <div class="col-md-10">
                   <div class=" form-control" disabled="true" placeholder="Company" type="text" value="Flour Mills">
-                    {{vendor[0].FirstName+' '+vendor[0].LastName}}</div>
+                    {{user[0].FirstName+' '+user[0].LastName}}</div>
                 </div>
               </div>
 
               <div class="row col-md-6">
                 <div class="col-md-2">
-                  <label for="name" class="col-form-label">Company Address </label>
-
-
+                  <label for="name" class="col-form-label">Phone Number</label>
                 </div>
                 <div class="col-md-10">
-                  <div class=" form-control">{{vendor[0].Address}}</div>
+                  <div class=" form-control">{{user[0].PhoneNumber}}</div>
+
                 </div>
               </div>
             </div>
@@ -63,21 +59,20 @@
             <div class="row">
               <div class="row col-md-6">
                 <div class="col-md-2">
-                  <label for="name" class="col-form-label">State</label>
+                  <label for="name" class="col-form-label">MDA</label>
                 </div>
                 <div class="col-md-10">
-                  <div class=" form-control">{{vendor[0].State}}</div>
+                  <div class=" form-control">{{user[0].Mda}}</div>
 
                 </div>
               </div>
 
               <div class="row col-md-6">
                 <div class="col-md-2">
-                  <label for="name" class="col-form-label">Phone Number</label>
+                  <label for="name" class="col-form-label">Email Address</label>
                 </div>
                 <div class="col-md-10">
-                  <div class=" form-control">{{vendor[0].PhoneNumber}}</div>
-
+                  <div class=" form-control">{{user[0].Email}}</div>
                 </div>
               </div>
             </div>
@@ -87,19 +82,19 @@
             <div class="row">
               <div class="row col-md-6">
                 <div class="col-md-2">
-                  <label for="name" class="col-form-label">Email Address</label>
+                  <label for="name" class="col-form-label">Role</label>
                 </div>
                 <div class="col-md-10">
-                  <div class=" form-control">{{vendor[0].Email}}</div>
+                  <div class=" form-control">{{user[0].Role}}</div>
                 </div>
               </div>
 
               <div class="row col-md-6">
                 <div class="col-md-2">
-                  <label for="name" class="col-form-label">Speciality</label>
+                  <label for="name" class="col-form-label">Status</label>
                 </div>
                 <div class="col-md-10">
-                  <div class=" form-control">{{vendor[0].assetType}}</div>
+                  <div class=" form-control">{{user[0].Status}}</div>
 
                 </div>
               </div>
@@ -107,6 +102,8 @@
           </div>
         </section>
       </div>
+
+
     </div>
 
 
@@ -116,18 +113,18 @@
 <section class=" fms-base-size  bg-white rounded-3 mt-5 mb-lg-5">
   <div class="row bg-white fms-rounded p-5 maint-card">
     <div class="col-md-12">
-      <p class=" text-base fw-bold mt-title">History</p>
+      <p class=" text-base fw-bold mt-title">Assets</p>
       <section class="text-center mt-5">
-        <img src="assets/img/no-details.svg" alt="No details">
-        <p class="mt-4 text-base">There is currently no history available <br>
-          for this vendor</p>
+        <img src="assets/img/car.svg" alt="No details">
+        <p class="mt-4 text-base">There is currently no asset <br>
+          that has been assigned to this user</p>
       </section>
     </div>
   </div>
 </section>
 
 <!-- MODAL -->
-<div class="modal fade" id="newVendorModal" aria-hidden="true" aria-labelledby="newVendorModalLabel" tabindex="-1">
+<div class="modal fade" id="newuserModal" aria-hidden="true" aria-labelledby="newuserModalLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -135,21 +132,21 @@
       </div>
       <div class="modal-body">
         <div class="container-fluid">
-          <div class="modal-title d-flex justify-content-between">
-            <h5 class="new-vendor" id="newVendorModalLabel">New Vendor</h5>
+          <div class="modal-title p-3 d-flex justify-content-between">
+            <h5 class="new-user" id="newuserModalLabel">Edit User</h5>
           </div>
           <form>
             <div class="row mb-4">
               <div class="col-md-6">
                 <div class="textOnInput">
                   <label for="firstName">First Name</label>
-                  <input type="text" class="form-control" id="firstName" placeholder="First Name" />
+                  <input type="text" class="form-control" id="firstName" placeholder={{user[0].FirstName}}/>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="textOnInput">
                   <label for="lastName">Last Name</label>
-                  <input type="text" class="form-control" id="lastName" placeholder="Last Name" />
+                  <input type="text" class="form-control" id="lastName" placeholder={{user[0].LastName}} />
                 </div>
               </div>
             </div>
@@ -157,18 +154,14 @@
               <div class="col-md-6">
                 <div class="textOnInput">
                   <label for="companyAddress">Company Address</label>
-                  <input type="text" class="form-control" id="companyAddress" placeholder="Company Address" />
+                  <input type="text" class="form-control" id="companyAddress" placeholder={{user[0].Address}} />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="textOnInput">
                   <label for="inputText">State</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select</option>
-                    <option value="1">Model X</option>
-                    <option value="2">505</option>
-                    <option value="3">GLE</option>
-                  </select>
+                  <input type="text" class="form-control" id="state" placeholder={{user[0].State}} />
+
                 </div>
               </div>
             </div>
@@ -187,7 +180,8 @@
               <div class="col-md-6">
                 <div class="textOnInput bg-gray">
                   <label for="phoneNumber">Phone Number</label>
-                  <input class="form-control" type="text" placeholder="+(234)-8030000" />
+                  <input type="number" class="form-control" id="phoneNumber" placeholder={{user[0].PhoneNumber}} />
+
                 </div>
               </div>
             </div>
@@ -196,13 +190,13 @@
               <div class="col-md-6">
                 <div class="textOnInput bg-gray">
                   <label for="email">Email Address</label>
-                  <input class="form-control" type="text" placeholder="Email" />
+                  <input type="text" class="form-control" id="email" placeholder={{user[0].Email}} />
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="textOnInput">
-                  <label for="inputText">vendor Type</label>
+                  <label for="inputText">user Type</label>
                   <select class="form-select" aria-label="Default select example">
                     <option selected>Select</option>
                     <option value="1">Bikes</option>
@@ -277,7 +271,7 @@
       </div>
       <div class="modal-footer justify-content-center">
         <!-- data-bs-dismiss="modal" -->
-        <button type="button" class="btn text-uppercase fms-btn__close confirm-btn" data-bs-target="#newVendorModal"
+        <button type="button" class="btn text-uppercase fms-btn__close confirm-btn" data-bs-target="#newuserModal"
           data-bs-toggle="modal" data-bs-dismiss="modal">
           No, cancel
         </button>
@@ -330,12 +324,12 @@
         </section>
         <p class="text-center confirm-title">Success</p>
         <p class="text-center confirm-desc">
-          New vendor has been added successfully
+          User details has been updated successfully.
         </p>
       </div>
       <div class="modal-footer justify-content-center">
         <!-- data-bs-dismiss="modal" -->
-        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#newVendorModal"
+        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#newuserModal"
           data-bs-toggle="modal" data-bs-dismiss="modal">
           Create another
         </button>
@@ -393,7 +387,7 @@
       </div>
       <div class="modal-footer justify-content-center">
         <!-- data-bs-dismiss="modal" -->
-        <button type="button" class="btn text-uppercase fms-btn__close confirm-btn" data-bs-target="#newVendorModal"
+        <button type="button" class="btn text-uppercase fms-btn__close confirm-btn" data-bs-target="#newuserModal"
           data-bs-toggle="modal" data-bs-dismiss="modal">
           No
         </button>
@@ -405,3 +399,4 @@
     </div>
   </div>
 </div>
+
