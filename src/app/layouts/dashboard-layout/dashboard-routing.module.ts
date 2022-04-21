@@ -8,6 +8,8 @@ import { MotorcycleComponent } from 'src/app/components/dashboard/assets/motorcy
 import { VehicleComponent } from 'src/app/components/dashboard/assets/vehicle/vehicle.component';
 import { HomeComponent } from 'src/app/components/dashboard/home/home.component';
 import { RequestComponent } from 'src/app/components/dashboard/request/request.component';
+import { UserDetailsComponent } from 'src/app/components/dashboard/user-details/user-details.component';
+import { UsersComponent } from 'src/app/components/dashboard/users/users.component';
 import { VendorDetailsComponent } from 'src/app/components/dashboard/vendor-details/vendor-details.component';
 import { VendorsComponent } from 'src/app/components/dashboard/vendors/vendors.component';
 import { ProfileComponent } from 'src/app/components/profile/profile.component';
@@ -48,6 +50,13 @@ const routes: Routes = [
   ,
   {
     path: 'vendors/:id', component: VendorDetailsComponent
+  },
+  {
+    path: 'users', component: UsersComponent
+  }
+  ,
+  {
+    path: 'users/:id', component: UserDetailsComponent
   }
 
 ];
