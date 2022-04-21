@@ -21,6 +21,8 @@ import { MaintenanceDetailComponent } from '../../components/dashboard/assets/ma
 import { UserDetailsComponent } from '../../components/dashboard/user-details/user-details.component';
 import { UsersComponent } from '../../components/dashboard/users/users.component';
 import { NgbPagination, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { VehicleDetailComponent } from '../../components/dashboard/assets/vehicle/vehicle-detail/vehicle-detail.component';
+
 
 
 @NgModule({
@@ -39,6 +41,7 @@ import { NgbPagination, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
     MaintenanceDetailComponent,
     UserDetailsComponent,
     UsersComponent,
+    VehicleDetailComponent,
   ],
   imports: [
     CommonModule,

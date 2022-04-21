@@ -1,0 +1,875 @@
+<section class="d-flex justify-content-between align-content-center py-5">
+  <section class="d-flex align-content-center">
+    <h5 class="default-title">MN302 - Mitsubishi Pajero 2009</h5>
+    <!-- <p class="maint-category">Repair</p> -->
+  </section>
+  <div class="dropdown">
+    <a class="btn btn-primary dropdown-toggle" role="button" id="maintenanceDropdownMenu" data-bs-toggle="dropdown"
+      aria-expanded="false">
+      Action
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="maintenanceDropdownMenu">
+      <li>
+        <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editAssetModal">
+          Edit
+        </button>
+        <!-- <a href="#" class="dropdown-item">
+          Edit
+        </a> -->
+      </li>
+      <li>
+        <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#requestModal">
+          Request maintenance
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#assignModal">
+          Assign/Reassign
+        </button>
+      <li>
+        <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#decommissionAssetModal">
+          Decommission
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="row gx-5">
+  <div class="col-md-6">
+    <div class="row bg-white maint-card">
+      <div class="col-md-12">
+        <p class="text-base"><span class="fw-bold text-gray-dark">Asset ID: </span><span>1001000</span></p>
+        <img width="600" src="assets/img/vehicle.png" alt="Vehicle">
+      </div>
+    </div>
+
+    <div class="row bg-white mt-4 maint-card">
+      <div class="col-md-12">
+        <div class="d-flex justify-content-center">
+          <ul class="nav nav-pills mb-3 vehicle-tab" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-general-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-general" type="button" role="tab" aria-controls="pills-general"
+                aria-selected="true">General</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-service-tab" data-bs-toggle="pill" data-bs-target="#pills-service"
+                type="button" role="tab" aria-controls="pills-service" aria-selected="false">Service</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-repair-tab" data-bs-toggle="pill" data-bs-target="#pills-repair"
+                type="button" role="tab" aria-controls="pills-repair" aria-selected="false">Repair</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-general" role="tabpanel" aria-labelledby="pills-general-tab">
+            <p class="fw-bold text-gray-dark text-base">Information</p>
+            <section class="mt-3">
+              <div class="row align-items-center">
+                <div class="col-md-2">
+                  <label for="name" class="col-form-label">Name</label>
+                </div>
+                <div class="col-md-10">
+                  <input type="text" id="name" disabled value="2011 Mercedes RX2" class="form-control"
+                    aria-describedby="NameOfAsset">
+                </div>
+              </div>
+
+              <div class="row align-items-center mt-3">
+                <div class="col-md-2">
+                  <label for="color" class="col-form-label">Colour</label>
+                </div>
+                <div class="col-md-10">
+                  <input type="text" id="color" disabled value="Gray" class="form-control"
+                    aria-describedby="colorOfAsset">
+                </div>
+              </div>
+
+              <div class="row align-items-center mt-3">
+                <div class="col-md-2">
+                  <label for="class" class="col-form-label">Class</label>
+                </div>
+                <div class="col-md-10">
+                  <input type="text" id="class" disabled value="Utility" class="form-control"
+                    aria-describedby="classOfAsset">
+                </div>
+              </div>
+
+              <div class="row align-items-center mt-3">
+                <div class="col-md-2">
+                  <label for="plateNo" class="col-form-label">Plate No:</label>
+                </div>
+                <div class="col-md-10">
+                  <input type="text" id="plateNo" disabled value="44-4882-GOV" class="form-control"
+                    aria-describedby="plateOfAsset">
+                </div>
+              </div>
+
+              <div class="row align-items-center mt-3">
+                <div class="col-md-2">
+                  <label for="engineNo" class="col-form-label">Engine No:</label>
+                </div>
+                <div class="col-md-10">
+                  <input type="text" id="engineNo" disabled value="44-4882-GOV" class="form-control"
+                    aria-describedby="engineNoOfAsset">
+                </div>
+              </div>
+
+              <div class="row align-items-center mt-3">
+                <div class="col-md-2">
+                  <label for="chasisNo" class="col-form-label">Chasis No:</label>
+                </div>
+                <div class="col-md-10">
+                  <input type="text" id="chasisNo" disabled value="31244-4882-8815" class="form-control"
+                    aria-describedby="chasisNoOfAsset">
+                </div>
+              </div>
+
+              <div class="row align-items-center mt-3">
+                <div class="col-md-2">
+                  <label for="yearPurchased" class="col-form-label">Year Purchased</label>
+                </div>
+                <div class="col-md-10">
+                  <input type="text" id="yearPurchased" disabled value="2020" class="form-control"
+                    aria-describedby="Name">
+                </div>
+              </div>
+
+              <div class="row align-items-center mt-3">
+                <div class="col-md-2">
+                  <label for="mileage" class="col-form-label">Mileage
+                    (Purchased):</label>
+                </div>
+                <div class="col-md-10">
+                  <input type="text" id="mileage" disabled value="17,000 mi" class="form-control"
+                    aria-describedby="Name">
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="tab-pane fade" id="pills-service" role="tabpanel" aria-labelledby="pills-service-tab">
+            <p class="fw-bold text-gray-dark text-base">Information</p>
+            <table class="table align-items-center">
+              <thead>
+                <tr>
+                  <th *ngFor="let maintHeader of maintHeaders" scope="col">
+                    {{maintHeader}}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr [routerLink]="['/dashboard/assets/maintenance/1']" *ngFor="let asset of assets; let i = index"
+                  class="text-dark user-row vendor">
+                  <td class="p-3">{{i+1}}</td>
+                  <td class="p-3 text-primary text-decoration-underline">{{asset.id}}</td>
+                  <td class="p-3">
+
+                    <svg *ngIf="asset.status == 'Completed'" width="6" height="6" viewBox="0 0 6 6" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="3" cy="3" r="3" fill="#74A27F" />
+                    </svg>
+                    <svg *ngIf="asset.status != 'Completed'" width="6" height="6" viewBox="0 0 6 6" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="3" cy="3" r="3" fill="#B26153" />
+                    </svg>
+                    {{asset.status}}
+                  </td>
+                  <td class="p-3">{{asset.date}}</td>
+                  <td class="p-3">{{asset.description}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tab-pane fade" id="pills-repair" role="tabpanel" aria-labelledby="pills-repair-tab">
+            <p class="fw-bold text-gray-dark text-base">Information</p>
+            <table class="table align-items-center">
+              <thead>
+                <tr>
+                  <th *ngFor="let maintHeader of maintHeaders" scope="col">
+                    {{maintHeader}}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr [routerLink]="['/dashboard/assets/maintenance/1']" *ngFor="let asset of assets; let i = index"
+                  class="text-dark user-row vendor">
+                  <td class="p-3">{{i+1}}</td>
+                  <td class="p-3 text-primary text-decoration-underline">{{asset.id}}</td>
+                  <td class="p-3">
+
+                    <svg *ngIf="asset.status == 'Completed'" width="6" height="6" viewBox="0 0 6 6" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="3" cy="3" r="3" fill="#74A27F" />
+                    </svg>
+                    <svg *ngIf="asset.status != 'Completed'" width="6" height="6" viewBox="0 0 6 6" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="3" cy="3" r="3" fill="#B26153" />
+                    </svg>
+                    {{asset.status}}
+                  </td>
+                  <td class="p-3">{{asset.date}}</td>
+                  <td class="p-3">{{asset.description}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-6">
+    <div class="row bg-white maint-card">
+      <div class="col-md-12">
+        <section class="mb-5">
+          <p class="fw-bold text-gray-dark text-base">Assignee</p>
+          <p class="assignee-title">Since June 2017</p>
+        </section>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="assets/img/user.svg" alt="User Avatar">
+          </div>
+          <div class="col-md-8">
+            <section class="mb-2">
+              <p class="assignee-title">Name</p>
+              <p>Abubakar Atanda Odudubariba</p>
+            </section>
+            <section class="mb-2">
+              <p class="assignee-title">Phone</p>
+              <p>+234 (0) 800 000 0000</p>
+            </section>
+            <section class="mb-2">
+              <p class="assignee-title">Email</p>
+              <p>abubakar.atanda@kaduna.gov.ng</p>
+            </section>
+            <section class="mb-2">
+              <p class="assignee-title">Designation</p>
+              <p>Minister of Socials.</p>
+            </section>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <section class="my-2">
+              <p class="assignee-title">Permanent address</p>
+              <p>14 Mallam Tafawa Balewa Boulevard, Bwari, Kaduna Central</p>
+            </section>
+            <section class="mb-2">
+              <p class="assignee-title">MDA</p>
+              <p>Kaduna State Planning and Budgeting Commission</p>
+            </section>
+            <section>
+              <p class="assignee-title">MDA Address</p>
+              <p>14 Mallam Tafawa Balewa Boulevard, Bwari, Kaduna Central, Kaduna State, Nigeria</p>
+            </section>
+          </div>
+
+          <section class="mt-5">
+            <button class="fms-btn__plain">
+              <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.0215 5.00072V7.00072L5.12415 7.00072L8.63689 10.2432L7.10482 11.6575L0.976562 6.00061L7.10482 0.34375L8.63689 1.75796L5.1239 5.00072L19.0215 5.00072Z"
+                  fill="#414141" />
+              </svg>
+              <p class="assignee-title mt-1">Prev</p>
+            </button>
+          </section>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row mt-4 bg-white maint-card">
+      <div class="col-md-12">
+        <section class="d-flex align-content-center justify-content-between">
+          <div>
+            <h6 class="text-gray-dark text-base fw-bold">Notes</h6>
+          </div>
+          <button class="fms-btn__outline">
+            <svg class="me-1" width="19" height="16" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M9.50223 0.855469C10.1334 0.855469 10.6451 1.36714 10.6451 1.99833V8.85547H17.5022C18.1334 8.85547 18.6451 9.36714 18.6451 9.99833C18.6451 10.6295 18.1334 11.1412 17.5022 11.1412H10.6451V17.9983C10.6451 18.6295 10.1334 19.1412 9.50223 19.1412C8.87105 19.1412 8.35937 18.6295 8.35937 17.9983V11.1412H1.50223C0.87105 11.1412 0.359375 10.6295 0.359375 9.99833C0.359375 9.36714 0.87105 8.85547 1.50223 8.85547H8.35937V1.99833C8.35937 1.36714 8.87105 0.855469 9.50223 0.855469Z"
+                fill="#282B80" />
+            </svg>
+            Add New
+          </button>
+        </section>
+        <section class="text-center no-img pt-5">
+          <img src="assets/img/no-details.svg" alt="No Detail">
+          <p class="pt-4">No Note has been created for this asset yet.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="modal fade" id="editAssetModal" aria-hidden="true" aria-labelledby="editAssetModalLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <h5 class="modal-title new-asset" id="editAssetModalLabel">Edit Asset</h5>
+          <form>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Manufacturer</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Mitsubishi</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Model</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Pajero</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Manufactured year</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>2009</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">color</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Gray</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Class</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Utility</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Chassis number</label>
+                  <input class="form-control" type="text" value="31244-4882-8815" placeholder="Enter">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Plate number</label>
+                  <input class="form-control" value="44-4882-GOV" type="text" placeholder="Enter">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Engine number</label>
+                  <input class="form-control" value="44-4882-GOV" type="text" placeholder="Enter">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Year purchased</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>2020</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Mileage at purchase(km)</label>
+                  <input class="form-control" type="text" placeholder="Enter">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Mileage current (km)</label>
+                  <input class="form-control" value="110,050" type="text" placeholder="Enter">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Location</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Governor’s office</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-5">
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Tag</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Governor’s convoy</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Assign</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Abubakar Atanda Odudubariba</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <!-- data-bs-dismiss="modal" -->
+        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#exampleModalToggle2"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save" data-bs-target="#exampleModalToggle2"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5> -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <section class="text-center">
+          <svg class="justify-content-center" width="100" height="100" viewBox="0 0 136 136" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_dd_1277_5524)">
+              <rect x="8" y="4" width="120" height="120" rx="50" fill="white" />
+            </g>
+            <path
+              d="M54.2745 52.93C54.2677 53.0915 54.2939 53.2526 54.3517 53.4036C54.4094 53.5545 54.4974 53.6921 54.6103 53.8077C54.7231 53.9234 54.8585 54.0148 55.008 54.0762C55.1574 54.1377 55.3179 54.1679 55.4795 54.165H59.6045C60.2945 54.165 60.8445 53.6 60.9345 52.915C61.3845 49.635 63.6345 47.245 67.6445 47.245C71.0745 47.245 74.2145 48.96 74.2145 53.085C74.2145 56.26 72.3445 57.72 69.3895 59.94C66.0245 62.385 63.3595 65.24 63.5495 69.875L63.5645 70.96C63.5697 71.288 63.7038 71.6009 63.9376 71.831C64.1715 72.0611 64.4864 72.19 64.8145 72.19H68.8695C69.201 72.19 69.519 72.0583 69.7534 71.8239C69.9878 71.5895 70.1195 71.2715 70.1195 70.94V70.415C70.1195 66.825 71.4845 65.78 75.1695 62.985C78.2145 60.67 81.3895 58.1 81.3895 52.705C81.3895 45.15 75.0095 41.5 68.0245 41.5C61.6895 41.5 54.7495 44.45 54.2745 52.93ZM62.0595 81.745C62.0595 84.41 64.1845 86.38 67.1095 86.38C70.1545 86.38 72.2495 84.41 72.2495 81.745C72.2495 78.985 70.1495 77.045 67.1045 77.045C64.1845 77.045 62.0595 78.985 62.0595 81.745Z"
+              fill="#F2B05C" />
+            <defs>
+              <filter id="filter0_dd_1277_5524" x="0" y="0" width="136" height="136" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha" />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="4" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.380392 0 0 0 0 0.380392 0 0 0 0 0.380392 0 0 0 0.18 0" />
+                <feBlend mode="multiply" in2="BackgroundImageFix" result="effect1_dropShadow_1277_5524" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha" />
+                <feOffset dy="2" />
+                <feGaussianBlur stdDeviation="2" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.380392 0 0 0 0 0.380392 0 0 0 0 0.380392 0 0 0 0.18 0" />
+                <feBlend mode="multiply" in2="effect1_dropShadow_1277_5524" result="effect2_dropShadow_1277_5524" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1277_5524" result="shape" />
+              </filter>
+            </defs>
+          </svg>
+        </section>
+
+
+        <p class="text-center confirm-title">Confirm</p>
+        <p class="text-center confirm-desc">Are you sure you want to continue</p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <!-- data-bs-dismiss="modal" -->
+        <button type="button" class="btn text-uppercase fms-btn__close confirm-btn" data-bs-target="#newAssetModal"
+          data-bs-toggle="modal" data-bs-dismiss="modal">No, cancel</button>
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save confirm-btn"
+          data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Yes, continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5> -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <section class="text-center">
+          <svg width="100" height="100" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_dd_1277_5524)">
+              <rect x="8" y="4" width="120" height="120" rx="50" fill="white" />
+            </g>
+            <path
+              d="M59.381 75.9526L46.048 62.6189L41.334 67.333L59.381 85.3807L96.0475 48.7141L91.3335 44L59.381 75.9526Z"
+              fill="#1F8B24" />
+            <defs>
+              <filter id="filter0_dd_1277_5524" x="0" y="0" width="136" height="136" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha" />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="4" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.380392 0 0 0 0 0.380392 0 0 0 0 0.380392 0 0 0 0.18 0" />
+                <feBlend mode="multiply" in2="BackgroundImageFix" result="effect1_dropShadow_1277_5524" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha" />
+                <feOffset dy="2" />
+                <feGaussianBlur stdDeviation="2" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.380392 0 0 0 0 0.380392 0 0 0 0 0.380392 0 0 0 0.18 0" />
+                <feBlend mode="multiply" in2="effect1_dropShadow_1277_5524" result="effect2_dropShadow_1277_5524" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1277_5524" result="shape" />
+              </filter>
+            </defs>
+          </svg>
+        </section>
+        <p class="text-center confirm-title">Success</p>
+        <p class="text-center confirm-desc">Asset has been updated successfully</p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <!-- data-bs-dismiss="modal" -->
+        <!-- <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#newAssetModal"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Create another</button> -->
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save bg-success"
+          data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Decommission modal -->
+
+<div class="modal fade" id="decommissionAssetModal" aria-hidden="true" aria-labelledby="decommissionAssetModalLabel"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <h5 class="modal-title new-asset" id="decommissionAssetModalLabel">Decommission Asset</h5>
+          <form>
+            <div class="row mb-4">
+              <div class="col-md-12">
+                <div class="textOnInput">
+                  <label for="inputText">Reason for decommissioning</label>
+                  <input class="form-control py-4" value="Please explain the reason(s) for decommissioning this asset"
+                    type="text" placeholder="Enter">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="mt-4 check-container">
+                  <input type="checkbox" class="form-check-input" id="decommission">
+                  <label class="form-check-label" for="decommission"><span
+                      class="decommission-check">Decommissioning</span> a vehicle is irreversible and cannot be undone.
+                    Please tick the box to confirm this action.</label>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <!-- data-bs-dismiss="modal" -->
+        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#exampleModalToggle2"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save" data-bs-target="#exampleModalToggle3"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Decommission</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Request -->
+
+<div class="modal fade" id="requestModal" aria-hidden="true" aria-labelledby="requestModalLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <h5 class="modal-title new-asset" id="requestModalLabel">New Request</h5>
+          <form>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Category</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select</option>
+                    <option value="1">Tesla</option>
+                    <option value="2">Mercedes</option>
+                    <option value="3">Range Rover</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Asset Type</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select</option>
+                    <option value="1">Model X</option>
+                    <option value="2">505</option>
+                    <option value="3">GLE</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Manufacturer</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select</option>
+                    <option value="1">Tesla</option>
+                    <option value="2">Mercedes</option>
+                    <option value="3">Range Rover</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Model</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select</option>
+                    <option value="1">Model X</option>
+                    <option value="2">505</option>
+                    <option value="3">GLE</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Colour</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select</option>
+                    <option value="1">Tesla</option>
+                    <option value="2">Mercedes</option>
+                    <option value="3">Range Rover</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="textOnInput">
+                  <label for="inputText">Plate Number</label>
+                  <input class="form-control" type="text" placeholder="Enter">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-12">
+                <div class="textOnInput">
+                  <label for="inputText">Description</label>
+                  <input class="form-control" type="text" placeholder="Type in description of request">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <!-- data-bs-dismiss="modal" -->
+        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#exampleModalToggle2"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save" data-bs-target="#exampleModalToggle3"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Assign/Reassign -->
+
+<div class="modal fade" id="assignModal" aria-hidden="true" aria-labelledby="assignModalLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <h5 class="modal-title new-asset" id="assignModalLabel">Re-assign</h5>
+          <form>
+            <div class="row mb-4">
+              <div class="col-md-12">
+                <div class="textOnInput">
+                  <input class="form-control" disabled type="text" value="Mitsubishi Pajero 2009">
+                </div>
+              </div>
+              <div class="col-md-12 mt-4">
+                <div class="textOnInput">
+                  <label for="inputText">Current Assignee</label>
+                  <input class="form-control" disabled type="text" value="Danladi Mustapha">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-12">
+                <div class="textOnInput">
+                  <label for="inputText">New assignee</label>
+                  <input role="button" data-bs-toggle="modal" placeholder="Select"
+                    data-bs-target="#assigneeSelectionModal" class="form-control" type="text" [value]="newAssignee">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <!-- data-bs-dismiss="modal" -->
+        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#exampleModalToggle2"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save" data-bs-target="#exampleModalToggle3"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="selectAssigneeModal" aria-hidden="true" aria-labelledby="selectAssigneeModalLabel"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <h5 class="modal-title new-asset" id="selectAssigneeModalLabel">Re-assign</h5>
+          <form>
+            <div class="row mb-4">
+              <div class="col-md-12">
+                <div class="textOnInput">
+                  <input class="form-control" disabled type="text" value="Mitsubishi Pajero 2009">
+                </div>
+              </div>
+              <div class="col-md-12 mt-4">
+                <div class="textOnInput">
+                  <label for="inputText">Current Assignee</label>
+                  <input class="form-control" disabled type="text" value="Danladi Mustapha">
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-12">
+                <div class="textOnInput">
+                  <label for="inputText">New assignee</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select</option>
+                    <option value="1">Tesla</option>
+                    <option value="2">Mercedes</option>
+                    <option value="3">Range Rover</option>
+                  </select>
+
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <!-- data-bs-dismiss="modal" -->
+        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#exampleModalToggle2"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save" data-bs-target="#exampleModalToggle3"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- New Assignee Selection -->
+<div class="modal fade" id="assigneeSelectionModal" aria-hidden="true" aria-labelledby="assigneeSelectionModalLabel"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <h5 class="modal-title new-asset" id="assigneeSelectionModalLabel">Assign New User</h5>
+          <div>
+            <button [ngClass]="{'fms-btn__selected': tabIndex === i}" class="fms-btn__plain"
+              (click)="filterUsersByFirstLetter($event)" *ngFor="let alphabet of alphabets; let i = index"
+              [id]="i">{{alphabet}}</button>
+          </div>
+          <form>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="search">
+                    <svg width="14" height="15" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.46875 8.75C6.55708 8.75 8.25 7.05708 8.25 4.96875C8.25 2.88042 6.55708 1.1875 4.46875 1.1875C2.38042 1.1875 0.6875 2.88042 0.6875 4.96875C0.6875 7.05708 2.38042 8.75 4.46875 8.75ZM8.9375 4.96875C8.9375 7.43677 6.93677 9.4375 4.46875 9.4375C2.00073 9.4375 0 7.43677 0 4.96875C0 2.50073 2.00073 0.5 4.46875 0.5C6.93677 0.5 8.9375 2.50073 8.9375 4.96875Z"
+                        fill="#7A828A" />
+                      <path
+                        d="M7.11142 8.57274C7.1317 8.60023 7.15428 8.62655 7.17917 8.65144L9.82637 11.2986C10.0949 11.5671 10.5302 11.5671 10.7986 11.2986C11.0671 11.0302 11.0671 10.5949 10.7986 10.3264L8.15144 7.67917C8.12655 7.65428 8.10023 7.6317 8.07274 7.61142C7.80305 7.9786 7.4786 8.30305 7.11142 8.57274Z"
+                        fill="#7A828A" />
+                    </svg>
+                  </span>
+                  <input type="text" class="form-control form-input" placeholder="Search" aria-label="search"
+                    aria-describedby="search">
+                </div>
+
+              </div>
+            </div>
+          </form>
+          <section class="user-selection-table">
+            <table class="table align-items-center">
+              <thead>
+                <tr>
+                  <th *ngFor="let userHeader of userHeaders" scope="col">
+                    {{userHeader}}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr (click)="setSelectedUser(user)" role="button" data-bs-target="#assignModal" data-bs-toggle="modal"
+                  data-bs-dismiss="modal" *ngFor=" let user of users; let i=index"
+                  class="text-dark user-row cursor-pointer">
+                  <td class="p-3">{{i+1}}</td>
+                  <td class="p-3">{{user.name}}</td>
+                  <td class="p-3">{{user.mda}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-end me-2">
+        <button type="button" class="btn text-uppercase fms-btn__close" data-bs-target="#assignModal"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Back</button>
+        <button type="button" class="btn btn-primary text-uppercase fms-btn__save" data-bs-target="#assignModal"
+          data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
