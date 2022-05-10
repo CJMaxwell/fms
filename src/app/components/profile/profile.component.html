@@ -1,64 +1,94 @@
 <h3 class="profile">Profile</h3>
 <main class="bg-white rounded-3 profile-desc">
-  <section>
-    <h5 class="profile-title">Personal Information</h5>
+  <div class="d-flex justify-content-center">
+    <section class="d-flex flex-column align-items-center">
+      <h5 class="profile-title">Personal Information</h5>
 
-    <section class="profile-avatar">
-      <img src="assets/img/unsplash_L2e2NVV9ul4.png" class="rounded-3" alt="Profile Avatar">
-      <button class="fms-btn__outline ms-4 me-2">Change</button>
-      <button class="fms-btn__plain">Remove</button>
+      <section class="profile-avatar">
+        <img
+          src="assets/img/unsplash_L2e2NVV9ul4.png"
+          class="rounded-3"
+          alt="Profile Avatar"
+        />
+      </section>
+      <section class="g-3 mb-4">
+        <button class="fms-btn__outline">Change</button>
+        <button class="fms-btn__plain">Remove</button>
+      </section>
+
+      <div class="input-width row g-3 fullName">
+        <div class="col-md-3">
+          <label for="fullName" class="col-form-label">Full Name</label>
+        </div>
+        <div class="col-md-9">
+          <input
+            type="text"
+            id="fullName"
+            disabled
+            class="form-control"
+            aria-describedby="fullname"
+            value="Danladi Abubakar"
+          />
+        </div>
+      </div>
+      <div class="input-width row g-3">
+        <div class="col-md-3">
+          <label for="email" class="col-form-label">Email Address</label>
+        </div>
+        <div class="col-md-9">
+          <input
+            type="email"
+            id="email"
+            disabled
+            class="form-control"
+            aria-describedby="email"
+            value="danladi.o.abubakar@kaduna.gov.ng"
+          />
+        </div>
+      </div>
     </section>
-    <div class="row g-3 align-items-center fullName">
-      <div class="col-md-1">
-        <label for="fullName" class="col-form-label">Full Name</label>
-      </div>
-      <div class="col-md-4">
-        <input type="text" id="fullName" disabled class="form-control" aria-describedby="fullname"
-          value="Danladi Abubakar">
-      </div>
-    </div>
-    <div class="row g-3 align-items-center">
-      <div class="col-md-1">
-        <label for="email" class="col-form-label">Email Address</label>
-      </div>
-      <div class="col-md-4">
-        <input type="email" id="email" disabled class="form-control" aria-describedby="email"
-          value="danladi.o.abubakar@kaduna.gov.ng">
-      </div>
-    </div>
-  </section>
-  <section>
-    <p class="fms-base-size profile-notification">Notifications</p>
-    <div class="row g-3 align-items-center">
-      <div class="col-md-3">
-        <p class="mb-0 notification-sub">Global</p>
-        <label for="notificationSwitchCheckChecked" class="col-form-label">Set Global notification to on/off</label>
-      </div>
-      <div class="col-md-4">
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="notificationSwitchCheckChecked" checked>
+    <!-- <section>
+      <p class="fms-base-size profile-notification">Notifications</p>
+      <div class="row g-3 align-items-center">
+        <div class="col-md-3">
+          <p class="mb-0 notification-sub">Global</p>
+          <label for="notificationSwitchCheckChecked" class="col-form-label"
+            >Set Global notification to on/off</label
+          >
+        </div>
+        <div class="col-md-4">
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="notificationSwitchCheckChecked"
+              checked
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row g-3 align-items-center">
-      <div class="col-md-3">
-        <p class="mb-0 notification-sub">Approvals</p>
-        <label for="approvalSwitchCheckChecked" class="col-form-label">Turn On/Off approval notifications
-          only.</label>
-      </div>
-      <div class="col-md-4">
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="approvalSwitchCheckChecked" checked>
+      <div class="row g-3 align-items-center">
+        <div class="col-md-3">
+          <p class="mb-0 notification-sub">Approvals</p>
+          <label for="approvalSwitchCheckChecked" class="col-form-label"
+            >Turn On/Off approval notifications only.</label
+          >
+        </div>
+        <div class="col-md-4">
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="approvalSwitchCheckChecked"
+              checked
+            />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="d-flex justify-content-end">
-    <button class="fms-btn__plain">
-      Discard Charges
-    </button>
-    <button class="fms-btn__sm">
-      Save Charges
-    </button>
-  </section>
+    </section>
+    <section class="d-flex justify-content-end">
+      <button class="fms-btn__plain">Discard Charges</button>
+      <button class="fms-btn__sm">Save Charges</button>
+    </section> -->
+  </div>
 </main>
